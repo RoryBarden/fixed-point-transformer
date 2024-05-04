@@ -219,7 +219,14 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
                 - a dictionary with any model-specific outputs
         """
         encoder_out = self.encoder(src_tokens, src_lengths=src_lengths, **kwargs)
-        decoder_out = self.decoder(prev_output_tokens, encoder_out=encoder_out, **kwargs)
+        # original decoder function
+        # decoder_out = self.decoder(prev_output_tokens, encoder_out=encoder_out, **kwargs)
+        # fp initialisation
+        decoder_out = self.decoder('<s>', encoder_out=encoder_out, **kwargs)
+        for i in range(3):
+            # will change num of iterations to a command-line argument later
+            # 3 chosen based on some quick googling of markov orders
+            decoder_out = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
         return decoder_out
 
     def forward_decoder(self, prev_output_tokens, **kwargs):
