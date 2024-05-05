@@ -221,12 +221,23 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
         encoder_out = self.encoder(src_tokens, src_lengths=src_lengths, **kwargs)
         # original decoder function
         # decoder_out = self.decoder(prev_output_tokens, encoder_out=encoder_out, **kwargs)
+
         # fp initialisation
-        decoder_out = self.decoder('<s>', encoder_out=encoder_out, **kwargs)
+        # get prev_output_token size to create initial tensor
+        batch_size, tgt_len = prev_output_tokens.size()
+        # get the index of `<s>' from the dictionary
+        bos_index = self.decoder.dictionary.bos()
+        # create tensor filled with the bos index (this will need to change)
+        decoder_out = torch.full((batch_size, tgt_len), bos_index, dtype=torch.long, device=prev_output_tokens.device)
         for i in range(3):
             # will change num of iterations to a command-line argument later
             # 3 chosen based on some quick googling of markov orders
-            decoder_out = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
+
+            # extract features from decoder_out
+            decoder_features = self.decoder.extract_features(decoder_out, encoder_out=encoder_out, **kwargs)
+            # project features to output size (vocabulary size)
+            decoder_projected = self.decoder.output_layer(decoder_features, **kwargs)
+            decoder_out = self.decoder(decoder_projected, encoder_out=encoder_out, **kwargs)
         return decoder_out
 
     def forward_decoder(self, prev_output_tokens, **kwargs):
