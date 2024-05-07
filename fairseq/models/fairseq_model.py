@@ -232,12 +232,11 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
         for i in range(3):
             # will change num of iterations to a command-line argument later
             # 3 chosen based on some quick googling of markov orders
-
-            # extract features from decoder_out
-            decoder_features = self.decoder.extract_features(decoder_out, encoder_out=encoder_out, **kwargs)
-            # project features to output size (vocabulary size)
-            decoder_projected = self.decoder.output_layer(decoder_features, **kwargs)
-            decoder_out = self.decoder(decoder_projected, encoder_out=encoder_out, **kwargs)
+            decoder_out, model_dict = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
+            # returns output of shape (batch, tgt_len, vocab)
+            # need to get this to shape (batch, tgt_len)
+            decoder_max_indices = decoder_out.argmax(dim=2)
+            # need to get tokens from indices?
         return decoder_out
 
     def forward_decoder(self, prev_output_tokens, **kwargs):
