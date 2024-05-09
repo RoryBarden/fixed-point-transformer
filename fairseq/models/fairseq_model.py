@@ -232,7 +232,7 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
         for i in range(3):
             # will change num of iterations to a command-line argument later
             # 3 chosen based on some quick googling of markov orders
-            decoder_out, model_dict = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
+            decoder_out, _ = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
             # returns output of shape (batch, tgt_len, vocab)
             # need to get this to shape (batch, tgt_len)
             decoder_indices = decoder_out.argmax(dim=2)
@@ -240,6 +240,7 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
             bos_tensor = torch.full((decoder_indices.shape[0], 1), bos_index, dtype=decoder_indices.dtype, device=decoder_indices.device)
             # concatenate bos to start of decoder indices (with last column removed)
             decoder_out = torch.cat((bos_tensor, decoder_indices[:, :-1]), dim=1)
+        decoder_out = self.decoder(decoder_out, encoder_out=encoder_out, **kwargs)
         return decoder_out
 
     def forward_decoder(self, prev_output_tokens, **kwargs):
