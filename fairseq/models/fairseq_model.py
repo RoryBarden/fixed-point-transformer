@@ -239,7 +239,7 @@ class FairseqEncoderDecoderModel(BaseFairseqModel):
             # create a (batch, 1) tensor of bos index
             bos_tensor = torch.full((decoder_indices.shape[0], 1), bos_index, dtype=decoder_indices.dtype, device=decoder_indices.device)
             # concatenate bos to start of decoder indices (with last column removed)
-            decoder_out = torch.cat((bos_tensor, decoder_indices[:, :-1]))
+            decoder_out = torch.cat((bos_tensor, decoder_indices[:, :-1]), dim=1)
         return decoder_out
 
     def forward_decoder(self, prev_output_tokens, **kwargs):
