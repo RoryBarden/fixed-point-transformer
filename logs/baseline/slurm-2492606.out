@@ -1,0 +1,1480 @@
+| NOTE: you may get better performance with: --ddp-backend=no_c10d
+| distributed init (rank 0): tcp://localhost:19587
+| distributed init (rank 3): tcp://localhost:19587
+| distributed init (rank 1): tcp://localhost:19587
+| distributed init (rank 2): tcp://localhost:19587
+| initialized host gpu14.pri.stanage.alces.network as rank 0
+| initialized host gpu14.pri.stanage.alces.network as rank 1
+| initialized host gpu14.pri.stanage.alces.network as rank 3
+| initialized host gpu14.pri.stanage.alces.network as rank 2
+/users/ace19rb/.conda/envs/share_layer_params_baseline/lib/python3.8/site-packages/torch/nn/parallel/distributed.py:425: UserWarning: The `check_reduction` argument in `DistributedDataParallel` module is deprecated. Please avoid using it.
+  warnings.warn(
+/users/ace19rb/.conda/envs/share_layer_params_baseline/lib/python3.8/site-packages/torch/nn/parallel/distributed.py:425: UserWarning: The `check_reduction` argument in `DistributedDataParallel` module is deprecated. Please avoid using it.
+  warnings.warn(
+Namespace(activation_dropout=0.0, activation_fn='relu', adam_betas='(0.9, 0.98)', adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, arch='transformer_wmt_en_de', attention_dropout=0.0, best_checkpoint_metric='loss', bpe=None, bucket_cap_mb=25, clip_norm=0.0, cpu=False, criterion='label_smoothed_cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/wmt16_en_de_bpe32k', dataset_impl=None, ddp_backend='c10d', decoder_attention_heads=8, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=2048, decoder_input_dim=512, decoder_layers=12, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method='tcp://localhost:19587', distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=4, dropout=0.3, empty_cache_freq=0, encoder_attention_heads=8, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=2048, encoder_layers=12, encoder_learned_pos=False, encoder_normalize_before=False, fast_stat_sync=False, find_unused_parameters=False, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=False, fp16_init_scale=128, fp16_scale_tolerance=0.0, fp16_scale_window=None, gradient_as_delta=False, init_type='adaptive', keep_interval_updates=-1, keep_last_epochs=20, label_smoothing=0.1, layer_wise_attention=False, lazy_load=False, left_pad_source='True', left_pad_target='False', load_alignments=False, log_format=None, log_interval=100, lr=[0.002], lr_scheduler='inverse_sqrt', max_epoch=0, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=3584, max_tokens_valid=3584, max_update=50000, maximize_best_checkpoint_metric=False, memory_efficient_fp16=False, min_loss_scale=0.0001, min_lr=1e-09, mixed_precision=False, no_cross_attention=False, no_epoch_checkpoints=False, no_last_checkpoints=False, no_progress_bar=False, no_save=False, no_save_optimizer_state=False, no_token_positional_embeddings=False, num_workers=1, optimizer='adam', optimizer_overrides='{}', plot_gradient=False, plot_stability=False, plot_variance=False, raw_text=False, required_batch_size_multiple=8, reset_dataloader=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='model-save-dir', save_interval=1, save_interval_updates=0, seed=1, sentence_avg=False, share_all_embeddings=True, share_decoder_input_output_embed=False, share_layer_num=2, share_params_cross_layer=True, share_type='cycle_reverse', skip_invalid_size_inputs_valid_test=False, source_lang=None, target_lang=None, task='translation', tbmf_wrapper=False, tensorboard_logdir='', threshold_loss_scale=None, tokenizer=None, train_subset='train', update_freq=[32], upsample_primary=1, use_bmuf=False, user_dir=None, valid_subset='valid', validate_interval=1, warmup_init_lr=1e-07, warmup_updates=8000, weight_decay=0.0)
+| [en] dictionary: 14568 types
+| [de] dictionary: 14568 types
+| loaded 3000 examples from: data-bin/wmt16_en_de_bpe32k/valid.en-de.en
+| loaded 3000 examples from: data-bin/wmt16_en_de_bpe32k/valid.en-de.de
+| data-bin/wmt16_en_de_bpe32k valid en-de 3000 examples
+source len: 1024
+target len: 1024
+1
+layer_num: 0, layer_iter: 1.0
+encoder attn ratio: 1.0
+layer_num: 0, layer_iter: 2.0
+encoder ffn ratio: 1.520343542098999
+layer_num: 1, layer_iter: 3.0
+encoder attn ratio: 1.6629321575164795
+layer_num: 1, layer_iter: 4.0
+encoder ffn ratio: 1.7166023254394531
+layer_num: 2, layer_iter: 5.0
+encoder attn ratio: 1.8478870391845703
+layer_num: 2, layer_iter: 6.0
+encoder ffn ratio: 1.8941705226898193
+layer_num: 3, layer_iter: 7.0
+encoder attn ratio: 2.0070347785949707
+layer_num: 3, layer_iter: 8.0
+encoder ffn ratio: 2.059675931930542
+layer_num: 4, layer_iter: 9.0
+encoder attn ratio: 2.1679866313934326
+layer_num: 4, layer_iter: 10.0
+encoder ffn ratio: 2.2195186614990234
+layer_num: 5, layer_iter: 11.0
+encoder attn ratio: 2.3206090927124023
+layer_num: 5, layer_iter: 12.0
+encoder ffn ratio: 2.382983684539795
+layer_num: 6, layer_iter: 13.0
+encoder attn ratio: 2.47210955619812
+layer_num: 6, layer_iter: 14.0
+encoder ffn ratio: 2.5312235355377197
+layer_num: 7, layer_iter: 15.0
+encoder attn ratio: 2.6138827800750732
+layer_num: 7, layer_iter: 16.0
+encoder ffn ratio: 2.668633460998535
+layer_num: 8, layer_iter: 17.0
+encoder attn ratio: 2.7522125244140625
+layer_num: 8, layer_iter: 18.0
+encoder ffn ratio: 2.807097911834717
+layer_num: 9, layer_iter: 19.0
+encoder attn ratio: 2.895045518875122
+layer_num: 9, layer_iter: 20.0
+encoder ffn ratio: 2.9540839195251465
+layer_num: 10, layer_iter: 21.0
+encoder attn ratio: 3.02681303024292
+layer_num: 10, layer_iter: 22.0
+encoder ffn ratio: 3.087460994720459
+layer_num: 11, layer_iter: 23.0
+encoder attn ratio: 3.162876844406128
+layer_num: 11, layer_iter: 24.0
+encoder ffn ratio: 3.212754726409912
+layer_num: 0, layer_iter: 1.0
+decoder self ratio: 1.0
+layer_num: 0, layer_iter: 2.0
+decoder en ratio: 1.585978627204895
+layer_num: 0, layer_iter: 3.0
+decoder ffn ratio: 1.6935501098632812
+layer_num: 1, layer_iter: 4.0
+decoder self ratio: 1.826002836227417
+layer_num: 1, layer_iter: 5.0
+decoder en ratio: 1.899922251701355
+layer_num: 1, layer_iter: 6.0
+decoder ffn ratio: 1.988216519355774
+layer_num: 2, layer_iter: 7.0
+decoder self ratio: 2.0975284576416016
+layer_num: 2, layer_iter: 8.0
+decoder en ratio: 2.167722702026367
+layer_num: 2, layer_iter: 9.0
+decoder ffn ratio: 2.240804672241211
+layer_num: 3, layer_iter: 10.0
+decoder self ratio: 2.3377346992492676
+layer_num: 3, layer_iter: 11.0
+decoder en ratio: 2.4095747470855713
+layer_num: 3, layer_iter: 12.0
+decoder ffn ratio: 2.4802281856536865
+layer_num: 4, layer_iter: 13.0
+decoder self ratio: 2.5701448917388916
+layer_num: 4, layer_iter: 14.0
+decoder en ratio: 2.6325747966766357
+layer_num: 4, layer_iter: 15.0
+decoder ffn ratio: 2.6998579502105713
+layer_num: 5, layer_iter: 16.0
+decoder self ratio: 2.780452251434326
+layer_num: 5, layer_iter: 17.0
+decoder en ratio: 2.8450872898101807
+layer_num: 5, layer_iter: 18.0
+decoder ffn ratio: 2.9128570556640625
+layer_num: 6, layer_iter: 19.0
+decoder self ratio: 2.986426591873169
+layer_num: 6, layer_iter: 20.0
+decoder en ratio: 3.0457983016967773
+layer_num: 6, layer_iter: 21.0
+decoder ffn ratio: 3.1094236373901367
+layer_num: 7, layer_iter: 22.0
+decoder self ratio: 3.1770684719085693
+layer_num: 7, layer_iter: 23.0
+decoder en ratio: 3.2428548336029053
+layer_num: 7, layer_iter: 24.0
+decoder ffn ratio: 3.297701597213745
+layer_num: 8, layer_iter: 25.0
+decoder self ratio: 3.3642964363098145
+layer_num: 8, layer_iter: 26.0
+decoder en ratio: 3.4305901527404785
+layer_num: 8, layer_iter: 27.0
+decoder ffn ratio: 3.4806103706359863
+layer_num: 9, layer_iter: 28.0
+decoder self ratio: 3.5458500385284424
+layer_num: 9, layer_iter: 29.0
+decoder en ratio: 3.6123085021972656
+layer_num: 9, layer_iter: 30.0
+decoder ffn ratio: 3.6567907333374023
+layer_num: 10, layer_iter: 31.0
+decoder self ratio: 3.7180001735687256
+layer_num: 10, layer_iter: 32.0
+decoder en ratio: 3.776127338409424
+layer_num: 10, layer_iter: 33.0
+decoder ffn ratio: 3.821091413497925
+layer_num: 11, layer_iter: 34.0
+decoder self ratio: 3.876079797744751
+layer_num: 11, layer_iter: 35.0
+decoder en ratio: 3.9286458492279053
+layer_num: 11, layer_iter: 36.0
+decoder ffn ratio: 3.9733970165252686
+TransformerModel(
+  (encoder): TransformerEncoder(
+    (embed_tokens): Embedding(14568, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (6): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (7): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (8): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (9): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (10): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (11): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (embed_tokens): Embedding(14568, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (6): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (7): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (8): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (9): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (10): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (11): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn): MultiheadAttention(
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (fc1): Linear(in_features=512, out_features=2048, bias=True)
+        (fc2): Linear(in_features=2048, out_features=512, bias=True)
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+)
+| model transformer_wmt_en_de, criterion LabelSmoothedCrossEntropyCriterion
+| num. model params: 51628032 (num. trained: 51628032)
+| training on 4 GPUs
+| max tokens per GPU = 3584 and max sentences per GPU = None
+| NOTICE: your device may support faster training with --fp16
+| loaded checkpoint model-save-dir/checkpoint_last.pt (epoch 29 @ 11977 updates)
+| loading train data for epoch 29
+| loaded 4500737 examples from: data-bin/wmt16_en_de_bpe32k/train.en-de.en
+| loaded 4500737 examples from: data-bin/wmt16_en_de_bpe32k/train.en-de.de
+| data-bin/wmt16_en_de_bpe32k train en-de 4500737 examples
+/users/ace19rb/.conda/envs/share_layer_params_baseline/lib/python3.8/site-packages/torch/nn/parallel/distributed.py:425: UserWarning: The `check_reduction` argument in `DistributedDataParallel` module is deprecated. Please avoid using it.
+  warnings.warn(
+/users/ace19rb/.conda/envs/share_layer_params_baseline/lib/python3.8/site-packages/torch/nn/parallel/distributed.py:425: UserWarning: The `check_reduction` argument in `DistributedDataParallel` module is deprecated. Please avoid using it.
+  warnings.warn(
+| epoch 030:    100 / 413 loss=3.970, nll_loss=2.461, ppl=5.51, wps=161484, ups=0, wpb=404562.366, bsz=10896.792, num_updates=12078, lr=0.00162771, gnorm=0.237, clip=0.000, oom=0.000, wall=280, train_wall=266
+resetting loss stats
+| epoch 030:    200 / 413 loss=3.984, nll_loss=2.477, ppl=5.57, wps=162888, ups=0, wpb=404745.600, bsz=10835.220, num_updates=12178, lr=0.00162101, gnorm=0.241, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 030:    300 / 413 loss=3.978, nll_loss=2.471, ppl=5.55, wps=160999, ups=0, wpb=404573.100, bsz=10921.760, num_updates=12278, lr=0.0016144, gnorm=0.234, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 030:    400 / 413 loss=3.991, nll_loss=2.486, ppl=5.60, wps=160576, ups=0, wpb=403305.560, bsz=10957.190, num_updates=12378, lr=0.00160787, gnorm=0.238, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 030 | loss 4.001 | nll_loss 2.498 | ppl 5.65 | wps 155545 | ups 0 | wpb 397822.167 | bsz 10728.667 | num_updates 12390 | lr 0.00160709 | gnorm 0.236 | clip 0.000 | oom 0.000 | wall 31 | train_wall 28
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/modules/multihead_attention.py:156: UserWarning: Output 0 of SplitBackward is a view and is being modified inplace. This view is an output of a function that returns multiple views. Inplace operators on such views are being deprecated and will be forbidden starting from version 1.8. Consider using `unsafe_` version of the function that produced this view or don't modify this view inplace. (Triggered internally at  /pytorch/torch/csrc/autograd/variable.cpp:547.)
+  q *= self.scaling
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/optim/adam.py:160: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:1005.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/modules/multihead_attention.py:156: UserWarning: Output 0 of SplitBackward is a view and is being modified inplace. This view is an output of a function that returns multiple views. Inplace operators on such views are being deprecated and will be forbidden starting from version 1.8. Consider using `unsafe_` version of the function that produced this view or don't modify this view inplace. (Triggered internally at  /pytorch/torch/csrc/autograd/variable.cpp:547.)
+  q *= self.scaling
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/optim/adam.py:160: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:1005.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/modules/multihead_attention.py:156: UserWarning: Output 0 of SplitBackward is a view and is being modified inplace. This view is an output of a function that returns multiple views. Inplace operators on such views are being deprecated and will be forbidden starting from version 1.8. Consider using `unsafe_` version of the function that produced this view or don't modify this view inplace. (Triggered internally at  /pytorch/torch/csrc/autograd/variable.cpp:547.)
+  q *= self.scaling
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/optim/adam.py:160: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:1005.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/modules/multihead_attention.py:156: UserWarning: Output 0 of SplitBackward is a view and is being modified inplace. This view is an output of a function that returns multiple views. Inplace operators on such views are being deprecated and will be forbidden starting from version 1.8. Consider using `unsafe_` version of the function that produced this view or don't modify this view inplace. (Triggered internally at  /pytorch/torch/csrc/autograd/variable.cpp:547.)
+  q *= self.scaling
+/users/ace19rb/Desktop/COM4520/share_layer_params/fairseq/optim/adam.py:160: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:1005.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+| epoch 030 | valid on 'valid' subset | loss 3.599 | nll_loss 1.993 | ppl 3.98 | num_updates 12390 | best_loss 3.59857
+| saved checkpoint model-save-dir/checkpoint30.pt (epoch 30 @ 12390 updates) (writing took 4.745281219482422 seconds)
+| epoch 031:    100 / 413 loss=3.971, nll_loss=2.463, ppl=5.51, wps=160593, ups=0, wpb=404374.842, bsz=10931.644, num_updates=12491, lr=0.00160058, gnorm=0.235, clip=0.000, oom=0.000, wall=293, train_wall=265
+resetting loss stats
+| epoch 031:    200 / 413 loss=3.958, nll_loss=2.448, ppl=5.46, wps=160813, ups=0, wpb=404531.560, bsz=10936.470, num_updates=12591, lr=0.00159421, gnorm=0.233, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 031:    300 / 413 loss=3.971, nll_loss=2.464, ppl=5.52, wps=160677, ups=0, wpb=404480.040, bsz=10822.420, num_updates=12691, lr=0.00158791, gnorm=0.231, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 031:    400 / 413 loss=3.980, nll_loss=2.474, ppl=5.56, wps=160494, ups=0, wpb=403619.540, bsz=10894.800, num_updates=12791, lr=0.00158169, gnorm=0.226, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 031 | loss 4.022 | nll_loss 2.522 | ppl 5.74 | wps 160618 | ups 0 | wpb 399343.167 | bsz 10939.333 | num_updates 12803 | lr 0.00158095 | gnorm 0.247 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 031 | valid on 'valid' subset | loss 3.583 | nll_loss 1.975 | ppl 3.93 | num_updates 12803 | best_loss 3.58321
+| saved checkpoint model-save-dir/checkpoint31.pt (epoch 31 @ 12803 updates) (writing took 4.414133071899414 seconds)
+| epoch 032:    100 / 413 loss=3.954, nll_loss=2.444, ppl=5.44, wps=160292, ups=0, wpb=403534.079, bsz=10888.703, num_updates=12904, lr=0.00157475, gnorm=0.234, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 032:    200 / 413 loss=3.963, nll_loss=2.455, ppl=5.48, wps=160524, ups=0, wpb=405178.260, bsz=10916.000, num_updates=13004, lr=0.00156869, gnorm=0.223, clip=0.000, oom=0.000, wall=252, train_wall=236
+resetting loss stats
+| epoch 032:    300 / 413 loss=3.960, nll_loss=2.452, ppl=5.47, wps=160553, ups=0, wpb=403564.990, bsz=10952.020, num_updates=13104, lr=0.00156269, gnorm=0.228, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 032:    400 / 413 loss=3.971, nll_loss=2.464, ppl=5.52, wps=164512, ups=0, wpb=404714.020, bsz=10889.520, num_updates=13204, lr=0.00155676, gnorm=0.243, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 032 | loss 3.968 | nll_loss 2.461 | ppl 5.51 | wps 164398 | ups 0 | wpb 399535.167 | bsz 10435.333 | num_updates 13216 | lr 0.00155606 | gnorm 0.215 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 032 | valid on 'valid' subset | loss 3.574 | nll_loss 1.968 | ppl 3.91 | num_updates 13216 | best_loss 3.57416
+| saved checkpoint model-save-dir/checkpoint32.pt (epoch 32 @ 13216 updates) (writing took 5.061661958694458 seconds)
+| epoch 033:    100 / 413 loss=3.941, nll_loss=2.430, ppl=5.39, wps=160868, ups=0, wpb=404908.881, bsz=10948.356, num_updates=13317, lr=0.00155014, gnorm=0.230, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 033:    200 / 413 loss=3.959, nll_loss=2.450, ppl=5.46, wps=160837, ups=0, wpb=404341.870, bsz=10890.870, num_updates=13417, lr=0.00154436, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 033:    300 / 413 loss=3.964, nll_loss=2.457, ppl=5.49, wps=160759, ups=0, wpb=403669.480, bsz=10881.140, num_updates=13517, lr=0.00153863, gnorm=0.229, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 033:    400 / 413 loss=3.952, nll_loss=2.443, ppl=5.44, wps=162860, ups=0, wpb=404128.260, bsz=10889.920, num_updates=13617, lr=0.00153297, gnorm=0.250, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 033 | loss 3.936 | nll_loss 2.425 | ppl 5.37 | wps 162907 | ups 0 | wpb 398944.417 | bsz 10730.000 | num_updates 13629 | lr 0.0015323 | gnorm 0.231 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 033 | valid on 'valid' subset | loss 3.578 | nll_loss 1.969 | ppl 3.92 | num_updates 13629 | best_loss 3.57416
+| saved checkpoint model-save-dir/checkpoint33.pt (epoch 33 @ 13629 updates) (writing took 3.2782468795776367 seconds)
+| epoch 034:    100 / 413 loss=3.937, nll_loss=2.426, ppl=5.37, wps=160773, ups=0, wpb=404630.386, bsz=10890.129, num_updates=13730, lr=0.00152665, gnorm=0.223, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 034:    200 / 413 loss=3.936, nll_loss=2.425, ppl=5.37, wps=162234, ups=0, wpb=404656.330, bsz=10958.980, num_updates=13830, lr=0.00152112, gnorm=0.228, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 034:    300 / 413 loss=3.951, nll_loss=2.442, ppl=5.43, wps=160795, ups=0, wpb=403874.740, bsz=10853.440, num_updates=13930, lr=0.00151565, gnorm=0.217, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 034:    400 / 413 loss=3.961, nll_loss=2.454, ppl=5.48, wps=163004, ups=0, wpb=404048.530, bsz=10888.800, num_updates=14030, lr=0.00151024, gnorm=0.235, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 034 | loss 3.917 | nll_loss 2.404 | ppl 5.29 | wps 162798 | ups 0 | wpb 397621.833 | bsz 10892.667 | num_updates 14042 | lr 0.0015096 | gnorm 0.205 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 034 | valid on 'valid' subset | loss 3.567 | nll_loss 1.959 | ppl 3.89 | num_updates 14042 | best_loss 3.5671
+| saved checkpoint model-save-dir/checkpoint34.pt (epoch 34 @ 14042 updates) (writing took 4.6002280712127686 seconds)
+| epoch 035:    100 / 413 loss=3.923, nll_loss=2.410, ppl=5.32, wps=162243, ups=0, wpb=404424.901, bsz=10954.950, num_updates=14143, lr=0.0015042, gnorm=0.224, clip=0.000, oom=0.000, wall=289, train_wall=264
+resetting loss stats
+| epoch 035:    200 / 413 loss=3.935, nll_loss=2.425, ppl=5.37, wps=162538, ups=0, wpb=403650.860, bsz=10834.950, num_updates=14243, lr=0.00149891, gnorm=0.228, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 035:    300 / 413 loss=3.948, nll_loss=2.439, ppl=5.42, wps=163151, ups=0, wpb=404157.300, bsz=10898.960, num_updates=14343, lr=0.00149367, gnorm=0.217, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 035:    400 / 413 loss=3.947, nll_loss=2.438, ppl=5.42, wps=161840, ups=0, wpb=404735.570, bsz=10900.320, num_updates=14443, lr=0.00148849, gnorm=0.225, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 035 | loss 3.926 | nll_loss 2.415 | ppl 5.33 | wps 160903 | ups 0 | wpb 399650.250 | bsz 10905.333 | num_updates 14455 | lr 0.00148787 | gnorm 0.220 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 035 | valid on 'valid' subset | loss 3.553 | nll_loss 1.946 | ppl 3.85 | num_updates 14455 | best_loss 3.5529
+| saved checkpoint model-save-dir/checkpoint35.pt (epoch 35 @ 14455 updates) (writing took 4.750653028488159 seconds)
+| epoch 036:    100 / 413 loss=3.927, nll_loss=2.415, ppl=5.33, wps=160972, ups=0, wpb=404989.396, bsz=10877.554, num_updates=14556, lr=0.0014827, gnorm=0.228, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 036:    200 / 413 loss=3.926, nll_loss=2.414, ppl=5.33, wps=160746, ups=0, wpb=404750.660, bsz=11001.520, num_updates=14656, lr=0.00147764, gnorm=0.221, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 036:    300 / 413 loss=3.929, nll_loss=2.418, ppl=5.35, wps=160658, ups=0, wpb=404079.020, bsz=10899.360, num_updates=14756, lr=0.00147262, gnorm=0.217, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 036:    400 / 413 loss=3.940, nll_loss=2.431, ppl=5.39, wps=161822, ups=0, wpb=403281.370, bsz=10832.000, num_updates=14856, lr=0.00146766, gnorm=0.220, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 036 | loss 3.925 | nll_loss 2.414 | ppl 5.33 | wps 162791 | ups 0 | wpb 398504.750 | bsz 10734.667 | num_updates 14868 | lr 0.00146706 | gnorm 0.219 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 036 | valid on 'valid' subset | loss 3.549 | nll_loss 1.946 | ppl 3.85 | num_updates 14868 | best_loss 3.54934
+| saved checkpoint model-save-dir/checkpoint36.pt (epoch 36 @ 14868 updates) (writing took 5.083187818527222 seconds)
+| epoch 037:    100 / 413 loss=3.915, nll_loss=2.402, ppl=5.29, wps=160517, ups=0, wpb=403956.238, bsz=10912.950, num_updates=14969, lr=0.00146211, gnorm=0.220, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 037:    200 / 413 loss=3.925, nll_loss=2.414, ppl=5.33, wps=161018, ups=0, wpb=404225.680, bsz=11010.580, num_updates=15069, lr=0.00145725, gnorm=0.227, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 037:    300 / 413 loss=3.924, nll_loss=2.413, ppl=5.33, wps=160604, ups=0, wpb=403774.020, bsz=10844.160, num_updates=15169, lr=0.00145243, gnorm=0.218, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 037:    400 / 413 loss=3.928, nll_loss=2.418, ppl=5.34, wps=161065, ups=0, wpb=404850.910, bsz=10813.510, num_updates=15269, lr=0.00144767, gnorm=0.214, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 037 | loss 3.954 | nll_loss 2.447 | ppl 5.45 | wps 161382 | ups 0 | wpb 401037.500 | bsz 10975.333 | num_updates 15281 | lr 0.0014471 | gnorm 0.230 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 037 | valid on 'valid' subset | loss 3.549 | nll_loss 1.947 | ppl 3.86 | num_updates 15281 | best_loss 3.54873
+| saved checkpoint model-save-dir/checkpoint37.pt (epoch 37 @ 15281 updates) (writing took 4.213061094284058 seconds)
+| epoch 038:    100 / 413 loss=3.906, nll_loss=2.392, ppl=5.25, wps=160681, ups=0, wpb=404147.198, bsz=10985.178, num_updates=15382, lr=0.00144234, gnorm=0.215, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 038:    200 / 413 loss=3.915, nll_loss=2.403, ppl=5.29, wps=161865, ups=0, wpb=404430.550, bsz=10838.720, num_updates=15482, lr=0.00143768, gnorm=0.208, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 038:    300 / 413 loss=3.925, nll_loss=2.415, ppl=5.33, wps=163421, ups=0, wpb=404655.710, bsz=10928.340, num_updates=15582, lr=0.00143306, gnorm=0.212, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 038:    400 / 413 loss=3.926, nll_loss=2.415, ppl=5.33, wps=161301, ups=0, wpb=403883.730, bsz=10900.480, num_updates=15682, lr=0.00142848, gnorm=0.216, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 038 | loss 3.899 | nll_loss 2.385 | ppl 5.22 | wps 160718 | ups 0 | wpb 398435.417 | bsz 10373.333 | num_updates 15694 | lr 0.00142793 | gnorm 0.201 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 038 | valid on 'valid' subset | loss 3.554 | nll_loss 1.947 | ppl 3.85 | num_updates 15694 | best_loss 3.54873
+| saved checkpoint model-save-dir/checkpoint38.pt (epoch 38 @ 15694 updates) (writing took 3.2060916423797607 seconds)
+| epoch 039:    100 / 413 loss=3.904, nll_loss=2.390, ppl=5.24, wps=160265, ups=0, wpb=403452.149, bsz=10872.178, num_updates=15795, lr=0.00142336, gnorm=0.215, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 039:    200 / 413 loss=3.911, nll_loss=2.398, ppl=5.27, wps=160826, ups=0, wpb=404773.520, bsz=10876.160, num_updates=15895, lr=0.00141888, gnorm=0.220, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 039:    300 / 413 loss=3.912, nll_loss=2.400, ppl=5.28, wps=160895, ups=0, wpb=404418.370, bsz=10869.920, num_updates=15995, lr=0.00141443, gnorm=0.209, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 039:    400 / 413 loss=3.918, nll_loss=2.407, ppl=5.30, wps=160543, ups=0, wpb=404289.920, bsz=11006.710, num_updates=16095, lr=0.00141003, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 039 | loss 3.917 | nll_loss 2.405 | ppl 5.30 | wps 160803 | ups 0 | wpb 400020.250 | bsz 10614.000 | num_updates 16107 | lr 0.00140951 | gnorm 0.230 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 039 | valid on 'valid' subset | loss 3.539 | nll_loss 1.940 | ppl 3.84 | num_updates 16107 | best_loss 3.53856
+| saved checkpoint model-save-dir/checkpoint39.pt (epoch 39 @ 16107 updates) (writing took 4.2434515953063965 seconds)
+| epoch 040:    100 / 413 loss=3.896, nll_loss=2.382, ppl=5.21, wps=160748, ups=0, wpb=404471.733, bsz=10888.010, num_updates=16208, lr=0.00140511, gnorm=0.208, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 040:    200 / 413 loss=3.905, nll_loss=2.391, ppl=5.25, wps=160986, ups=0, wpb=404749.970, bsz=10888.240, num_updates=16308, lr=0.0014008, gnorm=0.217, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 040:    300 / 413 loss=3.911, nll_loss=2.399, ppl=5.27, wps=162084, ups=0, wpb=404841.870, bsz=10941.600, num_updates=16408, lr=0.00139652, gnorm=0.206, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 040:    400 / 413 loss=3.912, nll_loss=2.400, ppl=5.28, wps=162197, ups=0, wpb=403163.730, bsz=10907.520, num_updates=16508, lr=0.00139228, gnorm=0.218, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 040 | loss 3.903 | nll_loss 2.391 | ppl 5.24 | wps 160983 | ups 0 | wpb 397490.750 | bsz 10609.333 | num_updates 16520 | lr 0.00139178 | gnorm 0.178 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 040 | valid on 'valid' subset | loss 3.535 | nll_loss 1.926 | ppl 3.80 | num_updates 16520 | best_loss 3.53463
+| saved checkpoint model-save-dir/checkpoint40.pt (epoch 40 @ 16520 updates) (writing took 4.360811710357666 seconds)
+| epoch 041:    100 / 413 loss=3.886, nll_loss=2.370, ppl=5.17, wps=160720, ups=0, wpb=404825.713, bsz=10926.337, num_updates=16621, lr=0.00138754, gnorm=0.218, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 041:    200 / 413 loss=3.905, nll_loss=2.392, ppl=5.25, wps=160688, ups=0, wpb=403990.110, bsz=10930.950, num_updates=16721, lr=0.00138339, gnorm=0.209, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 041:    300 / 413 loss=3.904, nll_loss=2.390, ppl=5.24, wps=160792, ups=0, wpb=403366.280, bsz=10792.180, num_updates=16821, lr=0.00137927, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 041:    400 / 413 loss=3.906, nll_loss=2.393, ppl=5.25, wps=160841, ups=0, wpb=404772.880, bsz=10933.520, num_updates=16921, lr=0.00137519, gnorm=0.208, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 041 | loss 3.914 | nll_loss 2.402 | ppl 5.29 | wps 160548 | ups 0 | wpb 399730.583 | bsz 10959.333 | num_updates 16933 | lr 0.0013747 | gnorm 0.226 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 041 | valid on 'valid' subset | loss 3.527 | nll_loss 1.927 | ppl 3.80 | num_updates 16933 | best_loss 3.52683
+| saved checkpoint model-save-dir/checkpoint41.pt (epoch 41 @ 16933 updates) (writing took 4.129938840866089 seconds)
+| epoch 042:    100 / 413 loss=3.885, nll_loss=2.369, ppl=5.17, wps=160757, ups=0, wpb=405102.812, bsz=10944.782, num_updates=17034, lr=0.00137062, gnorm=0.217, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 042:    200 / 413 loss=3.897, nll_loss=2.383, ppl=5.22, wps=160615, ups=0, wpb=403688.380, bsz=10891.280, num_updates=17134, lr=0.00136661, gnorm=0.206, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 042:    300 / 413 loss=3.900, nll_loss=2.387, ppl=5.23, wps=160799, ups=0, wpb=404793.910, bsz=10812.480, num_updates=17234, lr=0.00136264, gnorm=0.206, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 042:    400 / 413 loss=3.900, nll_loss=2.387, ppl=5.23, wps=161187, ups=0, wpb=403768.250, bsz=10936.500, num_updates=17334, lr=0.00135871, gnorm=0.212, clip=0.000, oom=0.000, wall=250, train_wall=234
+resetting loss stats
+| epoch 042 | loss 3.886 | nll_loss 2.372 | ppl 5.18 | wps 159995 | ups 0 | wpb 396387.750 | bsz 10940.667 | num_updates 17346 | lr 0.00135824 | gnorm 0.211 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 042 | valid on 'valid' subset | loss 3.527 | nll_loss 1.927 | ppl 3.80 | num_updates 17346 | best_loss 3.52683
+| saved checkpoint model-save-dir/checkpoint42.pt (epoch 42 @ 17346 updates) (writing took 3.0719821453094482 seconds)
+| epoch 043:    100 / 413 loss=3.876, nll_loss=2.360, ppl=5.13, wps=160575, ups=0, wpb=403873.733, bsz=10850.376, num_updates=17447, lr=0.0013543, gnorm=0.210, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 043:    200 / 413 loss=3.893, nll_loss=2.379, ppl=5.20, wps=161972, ups=0, wpb=404630.990, bsz=10858.000, num_updates=17547, lr=0.00135043, gnorm=0.208, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 043:    300 / 413 loss=3.897, nll_loss=2.384, ppl=5.22, wps=160827, ups=0, wpb=403933.480, bsz=10915.530, num_updates=17647, lr=0.0013466, gnorm=0.214, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 043:    400 / 413 loss=3.893, nll_loss=2.380, ppl=5.20, wps=160734, ups=0, wpb=404903.340, bsz=10952.560, num_updates=17747, lr=0.0013428, gnorm=0.204, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 043 | loss 3.902 | nll_loss 2.390 | ppl 5.24 | wps 159549 | ups 0 | wpb 396588.583 | bsz 11020.000 | num_updates 17759 | lr 0.00134235 | gnorm 0.229 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 043 | valid on 'valid' subset | loss 3.527 | nll_loss 1.926 | ppl 3.80 | num_updates 17759 | best_loss 3.52656
+| saved checkpoint model-save-dir/checkpoint43.pt (epoch 43 @ 17759 updates) (writing took 5.708972215652466 seconds)
+| epoch 044:    100 / 413 loss=3.879, nll_loss=2.363, ppl=5.14, wps=160650, ups=0, wpb=404367.980, bsz=10930.366, num_updates=17860, lr=0.00133855, gnorm=0.206, clip=0.000, oom=0.000, wall=293, train_wall=266
+resetting loss stats
+| epoch 044:    200 / 413 loss=3.881, nll_loss=2.365, ppl=5.15, wps=160265, ups=0, wpb=403736.070, bsz=11026.100, num_updates=17960, lr=0.00133482, gnorm=0.212, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 044:    300 / 413 loss=3.892, nll_loss=2.378, ppl=5.20, wps=160941, ups=0, wpb=405153.050, bsz=10888.480, num_updates=18060, lr=0.00133112, gnorm=0.218, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 044:    400 / 413 loss=3.889, nll_loss=2.375, ppl=5.19, wps=160870, ups=0, wpb=404013.230, bsz=10790.800, num_updates=18160, lr=0.00132745, gnorm=0.194, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 044 | loss 3.901 | nll_loss 2.389 | ppl 5.24 | wps 160687 | ups 0 | wpb 397140.833 | bsz 10519.333 | num_updates 18172 | lr 0.00132701 | gnorm 0.210 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 044 | valid on 'valid' subset | loss 3.529 | nll_loss 1.923 | ppl 3.79 | num_updates 18172 | best_loss 3.52656
+| saved checkpoint model-save-dir/checkpoint44.pt (epoch 44 @ 18172 updates) (writing took 3.328399658203125 seconds)
+| epoch 045:    100 / 413 loss=3.871, nll_loss=2.354, ppl=5.11, wps=160789, ups=0, wpb=403542.366, bsz=10803.980, num_updates=18273, lr=0.00132334, gnorm=0.211, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 045:    200 / 413 loss=3.896, nll_loss=2.383, ppl=5.21, wps=161044, ups=0, wpb=402935.390, bsz=10808.640, num_updates=18373, lr=0.00131973, gnorm=0.207, clip=0.000, oom=0.000, wall=250, train_wall=234
+resetting loss stats
+| epoch 045:    300 / 413 loss=3.882, nll_loss=2.367, ppl=5.16, wps=164393, ups=0, wpb=404897.010, bsz=10993.350, num_updates=18473, lr=0.00131615, gnorm=0.209, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 045:    400 / 413 loss=3.879, nll_loss=2.364, ppl=5.15, wps=161275, ups=0, wpb=405807.250, bsz=10993.360, num_updates=18573, lr=0.0013126, gnorm=0.193, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 045 | loss 3.861 | nll_loss 2.344 | ppl 5.08 | wps 159865 | ups 0 | wpb 397945.583 | bsz 10833.333 | num_updates 18585 | lr 0.00131218 | gnorm 0.217 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 045 | valid on 'valid' subset | loss 3.527 | nll_loss 1.919 | ppl 3.78 | num_updates 18585 | best_loss 3.52656
+| saved checkpoint model-save-dir/checkpoint45.pt (epoch 45 @ 18585 updates) (writing took 3.040797233581543 seconds)
+| epoch 046:    100 / 413 loss=3.868, nll_loss=2.351, ppl=5.10, wps=162511, ups=0, wpb=404091.020, bsz=10861.782, num_updates=18686, lr=0.00130863, gnorm=0.207, clip=0.000, oom=0.000, wall=287, train_wall=265
+resetting loss stats
+| epoch 046:    200 / 413 loss=3.882, nll_loss=2.367, ppl=5.16, wps=162467, ups=0, wpb=403443.990, bsz=10899.990, num_updates=18786, lr=0.00130514, gnorm=0.209, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 046:    300 / 413 loss=3.874, nll_loss=2.359, ppl=5.13, wps=160736, ups=0, wpb=404498.050, bsz=10980.000, num_updates=18886, lr=0.00130168, gnorm=0.206, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 046:    400 / 413 loss=3.882, nll_loss=2.367, ppl=5.16, wps=160881, ups=0, wpb=405034.820, bsz=10879.540, num_updates=18986, lr=0.00129825, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 046 | loss 3.900 | nll_loss 2.388 | ppl 5.23 | wps 160619 | ups 0 | wpb 398851.000 | bsz 10645.333 | num_updates 18998 | lr 0.00129784 | gnorm 0.198 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 046 | valid on 'valid' subset | loss 3.517 | nll_loss 1.913 | ppl 3.77 | num_updates 18998 | best_loss 3.51698
+| saved checkpoint model-save-dir/checkpoint46.pt (epoch 46 @ 18998 updates) (writing took 4.869253635406494 seconds)
+| epoch 047:    100 / 413 loss=3.866, nll_loss=2.349, ppl=5.10, wps=163532, ups=0, wpb=405138.614, bsz=10941.861, num_updates=19099, lr=0.0012944, gnorm=0.210, clip=0.000, oom=0.000, wall=288, train_wall=265
+resetting loss stats
+| epoch 047:    200 / 413 loss=3.881, nll_loss=2.366, ppl=5.16, wps=162001, ups=0, wpb=404021.460, bsz=10894.100, num_updates=19199, lr=0.00129103, gnorm=0.195, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 047:    300 / 413 loss=3.862, nll_loss=2.345, ppl=5.08, wps=162985, ups=0, wpb=403618.160, bsz=10870.390, num_updates=19299, lr=0.00128768, gnorm=0.207, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 047:    400 / 413 loss=3.878, nll_loss=2.364, ppl=5.15, wps=160832, ups=0, wpb=404232.490, bsz=10910.320, num_updates=19399, lr=0.00128436, gnorm=0.198, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 047 | loss 3.901 | nll_loss 2.389 | ppl 5.24 | wps 160718 | ups 0 | wpb 399240.000 | bsz 10677.333 | num_updates 19411 | lr 0.00128396 | gnorm 0.189 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 047 | valid on 'valid' subset | loss 3.521 | nll_loss 1.913 | ppl 3.77 | num_updates 19411 | best_loss 3.51698
+| saved checkpoint model-save-dir/checkpoint47.pt (epoch 47 @ 19411 updates) (writing took 3.7630412578582764 seconds)
+| epoch 048:    100 / 413 loss=3.847, nll_loss=2.328, ppl=5.02, wps=160399, ups=0, wpb=404465.901, bsz=10961.663, num_updates=19512, lr=0.00128063, gnorm=0.207, clip=0.000, oom=0.000, wall=291, train_wall=266
+resetting loss stats
+| epoch 048:    200 / 413 loss=3.867, nll_loss=2.351, ppl=5.10, wps=162786, ups=0, wpb=404451.420, bsz=10815.600, num_updates=19612, lr=0.00127736, gnorm=0.210, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 048:    300 / 413 loss=3.888, nll_loss=2.374, ppl=5.18, wps=164273, ups=0, wpb=403895.390, bsz=10882.470, num_updates=19712, lr=0.00127412, gnorm=0.201, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 048:    400 / 413 loss=3.871, nll_loss=2.355, ppl=5.12, wps=161858, ups=0, wpb=404226.960, bsz=10933.940, num_updates=19812, lr=0.0012709, gnorm=0.200, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 048 | loss 3.894 | nll_loss 2.381 | ppl 5.21 | wps 164440 | ups 0 | wpb 399054.833 | bsz 10867.333 | num_updates 19824 | lr 0.00127051 | gnorm 0.226 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 048 | valid on 'valid' subset | loss 3.511 | nll_loss 1.910 | ppl 3.76 | num_updates 19824 | best_loss 3.51081
+| saved checkpoint model-save-dir/checkpoint48.pt (epoch 48 @ 19824 updates) (writing took 4.623601913452148 seconds)
+| epoch 049:    100 / 413 loss=3.863, nll_loss=2.346, ppl=5.09, wps=161068, ups=0, wpb=404136.832, bsz=10910.970, num_updates=19925, lr=0.00126729, gnorm=0.211, clip=0.000, oom=0.000, wall=290, train_wall=264
+resetting loss stats
+| epoch 049:    200 / 413 loss=3.860, nll_loss=2.343, ppl=5.07, wps=161241, ups=0, wpb=404829.470, bsz=10939.120, num_updates=20025, lr=0.00126412, gnorm=0.201, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 049:    300 / 413 loss=3.864, nll_loss=2.347, ppl=5.09, wps=160868, ups=0, wpb=404353.380, bsz=10852.660, num_updates=20125, lr=0.00126098, gnorm=0.203, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 049:    400 / 413 loss=3.873, nll_loss=2.358, ppl=5.13, wps=160358, ups=0, wpb=403742.950, bsz=10899.830, num_updates=20225, lr=0.00125786, gnorm=0.208, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 049 | loss 3.861 | nll_loss 2.344 | ppl 5.08 | wps 160939 | ups 0 | wpb 398890.917 | bsz 10797.333 | num_updates 20237 | lr 0.00125748 | gnorm 0.185 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 049 | valid on 'valid' subset | loss 3.513 | nll_loss 1.906 | ppl 3.75 | num_updates 20237 | best_loss 3.51081
+| saved checkpoint model-save-dir/checkpoint49.pt (epoch 49 @ 20237 updates) (writing took 3.1043283939361572 seconds)
+| epoch 050:    100 / 413 loss=3.853, nll_loss=2.335, ppl=5.05, wps=160608, ups=0, wpb=403857.139, bsz=10926.356, num_updates=20338, lr=0.00125436, gnorm=0.202, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 050:    200 / 413 loss=3.858, nll_loss=2.341, ppl=5.07, wps=161031, ups=0, wpb=405089.200, bsz=10953.680, num_updates=20438, lr=0.00125128, gnorm=0.206, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 050:    300 / 413 loss=3.856, nll_loss=2.339, ppl=5.06, wps=160966, ups=0, wpb=404448.050, bsz=10864.400, num_updates=20538, lr=0.00124823, gnorm=0.205, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 050:    400 / 413 loss=3.881, nll_loss=2.366, ppl=5.16, wps=160777, ups=0, wpb=403770.590, bsz=10859.120, num_updates=20638, lr=0.00124521, gnorm=0.199, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 050 | loss 3.861 | nll_loss 2.345 | ppl 5.08 | wps 159803 | ups 0 | wpb 398061.333 | bsz 10787.917 | num_updates 20650 | lr 0.00124484 | gnorm 0.187 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 050 | valid on 'valid' subset | loss 3.512 | nll_loss 1.905 | ppl 3.75 | num_updates 20650 | best_loss 3.51081
+| saved checkpoint model-save-dir/checkpoint50.pt (epoch 50 @ 20650 updates) (writing took 3.1209557056427 seconds)
+| epoch 051:    100 / 413 loss=3.848, nll_loss=2.330, ppl=5.03, wps=160445, ups=0, wpb=404089.832, bsz=10904.317, num_updates=20751, lr=0.00124181, gnorm=0.199, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 051:    200 / 413 loss=3.847, nll_loss=2.329, ppl=5.02, wps=160857, ups=0, wpb=404116.530, bsz=10873.840, num_updates=20851, lr=0.00123883, gnorm=0.213, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 051:    300 / 413 loss=3.867, nll_loss=2.352, ppl=5.10, wps=160408, ups=0, wpb=404044.220, bsz=10891.590, num_updates=20951, lr=0.00123587, gnorm=0.215, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 051:    400 / 413 loss=3.866, nll_loss=2.351, ppl=5.10, wps=160865, ups=0, wpb=404769.670, bsz=10930.500, num_updates=21051, lr=0.00123293, gnorm=0.202, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 051 | loss 3.890 | nll_loss 2.378 | ppl 5.20 | wps 163316 | ups 0 | wpb 399248.000 | bsz 10817.333 | num_updates 21063 | lr 0.00123258 | gnorm 0.203 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 051 | valid on 'valid' subset | loss 3.512 | nll_loss 1.901 | ppl 3.73 | num_updates 21063 | best_loss 3.51081
+| saved checkpoint model-save-dir/checkpoint51.pt (epoch 51 @ 21063 updates) (writing took 3.3674535751342773 seconds)
+| epoch 052:    100 / 413 loss=3.855, nll_loss=2.337, ppl=5.05, wps=160822, ups=0, wpb=403998.911, bsz=10851.802, num_updates=21164, lr=0.00122963, gnorm=0.199, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 052:    200 / 413 loss=3.853, nll_loss=2.336, ppl=5.05, wps=163100, ups=0, wpb=404984.600, bsz=10903.990, num_updates=21264, lr=0.00122674, gnorm=0.206, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 052:    300 / 413 loss=3.853, nll_loss=2.336, ppl=5.05, wps=163298, ups=0, wpb=404200.080, bsz=10988.640, num_updates=21364, lr=0.00122387, gnorm=0.208, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 052:    400 / 413 loss=3.862, nll_loss=2.346, ppl=5.08, wps=162997, ups=0, wpb=403706.350, bsz=10835.700, num_updates=21464, lr=0.00122101, gnorm=0.202, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 052 | loss 3.818 | nll_loss 2.296 | ppl 4.91 | wps 162993 | ups 0 | wpb 400341.500 | bsz 10989.333 | num_updates 21476 | lr 0.00122067 | gnorm 0.177 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 052 | valid on 'valid' subset | loss 3.501 | nll_loss 1.891 | ppl 3.71 | num_updates 21476 | best_loss 3.50053
+| saved checkpoint model-save-dir/checkpoint52.pt (epoch 52 @ 21476 updates) (writing took 4.9488749504089355 seconds)
+| epoch 053:    100 / 413 loss=3.836, nll_loss=2.316, ppl=4.98, wps=160999, ups=0, wpb=404720.178, bsz=10928.703, num_updates=21577, lr=0.00121781, gnorm=0.204, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 053:    200 / 413 loss=3.850, nll_loss=2.332, ppl=5.03, wps=160866, ups=0, wpb=404599.080, bsz=11000.500, num_updates=21677, lr=0.001215, gnorm=0.204, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 053:    300 / 413 loss=3.861, nll_loss=2.345, ppl=5.08, wps=164162, ups=0, wpb=404400.220, bsz=10824.800, num_updates=21777, lr=0.0012122, gnorm=0.205, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 053:    400 / 413 loss=3.861, nll_loss=2.345, ppl=5.08, wps=160409, ups=0, wpb=403243.870, bsz=10836.160, num_updates=21877, lr=0.00120943, gnorm=0.202, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 053 | loss 3.840 | nll_loss 2.322 | ppl 5.00 | wps 160708 | ups 0 | wpb 399669.667 | bsz 10899.333 | num_updates 21889 | lr 0.0012091 | gnorm 0.201 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 053 | valid on 'valid' subset | loss 3.501 | nll_loss 1.895 | ppl 3.72 | num_updates 21889 | best_loss 3.50053
+| saved checkpoint model-save-dir/checkpoint53.pt (epoch 53 @ 21889 updates) (writing took 3.420794725418091 seconds)
+| epoch 054:    100 / 413 loss=3.841, nll_loss=2.322, ppl=5.00, wps=162427, ups=0, wpb=405263.040, bsz=11031.515, num_updates=21990, lr=0.00120632, gnorm=0.209, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 054:    200 / 413 loss=3.851, nll_loss=2.333, ppl=5.04, wps=162244, ups=0, wpb=404275.590, bsz=10852.900, num_updates=22090, lr=0.00120359, gnorm=0.199, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 054:    300 / 413 loss=3.851, nll_loss=2.333, ppl=5.04, wps=162314, ups=0, wpb=404134.220, bsz=10842.160, num_updates=22190, lr=0.00120087, gnorm=0.201, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 054:    400 / 413 loss=3.851, nll_loss=2.334, ppl=5.04, wps=160216, ups=0, wpb=403401.200, bsz=10940.400, num_updates=22290, lr=0.00119817, gnorm=0.212, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 054 | loss 3.843 | nll_loss 2.324 | ppl 5.01 | wps 161842 | ups 0 | wpb 398701.917 | bsz 10250.667 | num_updates 22302 | lr 0.00119785 | gnorm 0.214 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 054 | valid on 'valid' subset | loss 3.500 | nll_loss 1.901 | ppl 3.73 | num_updates 22302 | best_loss 3.50018
+| saved checkpoint model-save-dir/checkpoint54.pt (epoch 54 @ 22302 updates) (writing took 4.567596435546875 seconds)
+| epoch 055:    100 / 413 loss=3.835, nll_loss=2.316, ppl=4.98, wps=160781, ups=0, wpb=404704.871, bsz=10872.713, num_updates=22403, lr=0.00119515, gnorm=0.200, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 055:    200 / 413 loss=3.837, nll_loss=2.318, ppl=4.99, wps=160931, ups=0, wpb=404576.460, bsz=10879.760, num_updates=22503, lr=0.00119249, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 055:    300 / 413 loss=3.854, nll_loss=2.337, ppl=5.05, wps=164034, ups=0, wpb=404198.260, bsz=10933.510, num_updates=22603, lr=0.00118985, gnorm=0.203, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 055:    400 / 413 loss=3.854, nll_loss=2.337, ppl=5.05, wps=160350, ups=0, wpb=403715.800, bsz=10917.700, num_updates=22703, lr=0.00118723, gnorm=0.204, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 055 | loss 3.858 | nll_loss 2.342 | ppl 5.07 | wps 159532 | ups 0 | wpb 397737.250 | bsz 10791.333 | num_updates 22715 | lr 0.00118691 | gnorm 0.202 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 055 | valid on 'valid' subset | loss 3.492 | nll_loss 1.889 | ppl 3.70 | num_updates 22715 | best_loss 3.49193
+| saved checkpoint model-save-dir/checkpoint55.pt (epoch 55 @ 22715 updates) (writing took 4.742106199264526 seconds)
+| epoch 056:    100 / 413 loss=3.836, nll_loss=2.316, ppl=4.98, wps=162602, ups=0, wpb=404647.713, bsz=10814.653, num_updates=22816, lr=0.00118428, gnorm=0.199, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 056:    200 / 413 loss=3.845, nll_loss=2.327, ppl=5.02, wps=161643, ups=0, wpb=404493.380, bsz=10990.080, num_updates=22916, lr=0.0011817, gnorm=0.208, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 056:    300 / 413 loss=3.840, nll_loss=2.322, ppl=5.00, wps=161702, ups=0, wpb=403634.120, bsz=10926.170, num_updates=23016, lr=0.00117913, gnorm=0.203, clip=0.000, oom=0.000, wall=250, train_wall=236
+resetting loss stats
+| epoch 056:    400 / 413 loss=3.850, nll_loss=2.333, ppl=5.04, wps=161031, ups=0, wpb=404537.980, bsz=10875.200, num_updates=23116, lr=0.00117657, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 056 | loss 3.836 | nll_loss 2.317 | ppl 4.98 | wps 160046 | ups 0 | wpb 396760.333 | bsz 10776.000 | num_updates 23128 | lr 0.00117627 | gnorm 0.191 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 056 | valid on 'valid' subset | loss 3.485 | nll_loss 1.883 | ppl 3.69 | num_updates 23128 | best_loss 3.4853
+| saved checkpoint model-save-dir/checkpoint56.pt (epoch 56 @ 23128 updates) (writing took 4.67115044593811 seconds)
+| epoch 057:    100 / 413 loss=3.831, nll_loss=2.311, ppl=4.96, wps=160796, ups=0, wpb=404655.228, bsz=10853.950, num_updates=23229, lr=0.00117371, gnorm=0.202, clip=0.000, oom=0.000, wall=292, train_wall=265
+resetting loss stats
+| epoch 057:    200 / 413 loss=3.834, nll_loss=2.315, ppl=4.98, wps=161839, ups=0, wpb=404360.720, bsz=10980.800, num_updates=23329, lr=0.00117119, gnorm=0.208, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 057:    300 / 413 loss=3.843, nll_loss=2.324, ppl=5.01, wps=163980, ups=0, wpb=404341.780, bsz=10980.480, num_updates=23429, lr=0.00116869, gnorm=0.203, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 057:    400 / 413 loss=3.851, nll_loss=2.334, ppl=5.04, wps=164139, ups=0, wpb=404098.850, bsz=10814.800, num_updates=23529, lr=0.0011662, gnorm=0.205, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 057 | loss 3.841 | nll_loss 2.322 | ppl 5.00 | wps 162303 | ups 0 | wpb 395564.833 | bsz 10573.333 | num_updates 23541 | lr 0.0011659 | gnorm 0.194 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 057 | valid on 'valid' subset | loss 3.494 | nll_loss 1.889 | ppl 3.70 | num_updates 23541 | best_loss 3.4853
+| saved checkpoint model-save-dir/checkpoint57.pt (epoch 57 @ 23541 updates) (writing took 2.7155840396881104 seconds)
+| epoch 058:    100 / 413 loss=3.822, nll_loss=2.300, ppl=4.93, wps=161963, ups=0, wpb=403802.040, bsz=10960.871, num_updates=23642, lr=0.00116341, gnorm=0.205, clip=0.000, oom=0.000, wall=287, train_wall=264
+resetting loss stats
+| epoch 058:    200 / 413 loss=3.852, nll_loss=2.335, ppl=5.04, wps=161992, ups=0, wpb=403995.400, bsz=10723.280, num_updates=23742, lr=0.00116096, gnorm=0.216, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 058:    300 / 413 loss=3.833, nll_loss=2.314, ppl=4.97, wps=163411, ups=0, wpb=404603.520, bsz=10908.640, num_updates=23842, lr=0.00115852, gnorm=0.205, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 058:    400 / 413 loss=3.840, nll_loss=2.322, ppl=5.00, wps=163365, ups=0, wpb=404508.700, bsz=11000.490, num_updates=23942, lr=0.0011561, gnorm=0.201, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 058 | loss 3.845 | nll_loss 2.328 | ppl 5.02 | wps 163693 | ups 0 | wpb 400193.583 | bsz 10870.667 | num_updates 23954 | lr 0.00115581 | gnorm 0.186 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 058 | valid on 'valid' subset | loss 3.496 | nll_loss 1.896 | ppl 3.72 | num_updates 23954 | best_loss 3.4853
+| saved checkpoint model-save-dir/checkpoint58.pt (epoch 58 @ 23954 updates) (writing took 3.23946213722229 seconds)
+| epoch 059:    100 / 413 loss=3.831, nll_loss=2.311, ppl=4.96, wps=162080, ups=0, wpb=404187.851, bsz=10916.505, num_updates=24055, lr=0.00115338, gnorm=0.209, clip=0.000, oom=0.000, wall=288, train_wall=265
+resetting loss stats
+| epoch 059:    200 / 413 loss=3.828, nll_loss=2.308, ppl=4.95, wps=162992, ups=0, wpb=404119.070, bsz=10849.300, num_updates=24155, lr=0.00115099, gnorm=0.200, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 059:    300 / 413 loss=3.841, nll_loss=2.323, ppl=5.00, wps=162113, ups=0, wpb=403962.680, bsz=10859.040, num_updates=24255, lr=0.00114861, gnorm=0.221, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 059:    400 / 413 loss=3.837, nll_loss=2.318, ppl=4.99, wps=162724, ups=0, wpb=404857.420, bsz=10995.280, num_updates=24355, lr=0.00114625, gnorm=0.199, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 059 | loss 3.831 | nll_loss 2.312 | ppl 4.96 | wps 160459 | ups 0 | wpb 398350.083 | bsz 10650.667 | num_updates 24367 | lr 0.00114597 | gnorm 0.191 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 059 | valid on 'valid' subset | loss 3.495 | nll_loss 1.892 | ppl 3.71 | num_updates 24367 | best_loss 3.4853
+| saved checkpoint model-save-dir/checkpoint59.pt (epoch 59 @ 24367 updates) (writing took 3.1312992572784424 seconds)
+| epoch 060:    100 / 413 loss=3.819, nll_loss=2.298, ppl=4.92, wps=159896, ups=0, wpb=404020.752, bsz=11018.386, num_updates=24468, lr=0.0011436, gnorm=0.206, clip=0.000, oom=0.000, wall=291, train_wall=266
+resetting loss stats
+| epoch 060:    200 / 413 loss=3.830, nll_loss=2.311, ppl=4.96, wps=160951, ups=0, wpb=404471.700, bsz=10821.840, num_updates=24568, lr=0.00114127, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 060:    300 / 413 loss=3.847, nll_loss=2.330, ppl=5.03, wps=160624, ups=0, wpb=403987.740, bsz=10879.120, num_updates=24668, lr=0.00113896, gnorm=0.200, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 060:    400 / 413 loss=3.828, nll_loss=2.309, ppl=4.95, wps=163050, ups=0, wpb=404765.600, bsz=10887.040, num_updates=24768, lr=0.00113666, gnorm=0.214, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 060 | loss 3.851 | nll_loss 2.335 | ppl 5.04 | wps 162004 | ups 0 | wpb 397374.250 | bsz 10756.667 | num_updates 24780 | lr 0.00113638 | gnorm 0.197 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 060 | valid on 'valid' subset | loss 3.482 | nll_loss 1.878 | ppl 3.67 | num_updates 24780 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint60.pt (epoch 60 @ 24780 updates) (writing took 4.500100612640381 seconds)
+| epoch 061:    100 / 413 loss=3.832, nll_loss=2.312, ppl=4.97, wps=160616, ups=0, wpb=404010.921, bsz=10818.139, num_updates=24881, lr=0.00113407, gnorm=0.201, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 061:    200 / 413 loss=3.818, nll_loss=2.297, ppl=4.92, wps=162800, ups=0, wpb=405078.580, bsz=10942.790, num_updates=24981, lr=0.0011318, gnorm=0.210, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 061:    300 / 413 loss=3.836, nll_loss=2.317, ppl=4.98, wps=161086, ups=0, wpb=403570.520, bsz=10819.600, num_updates=25081, lr=0.00112954, gnorm=0.214, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 061:    400 / 413 loss=3.833, nll_loss=2.314, ppl=4.97, wps=163306, ups=0, wpb=404775.980, bsz=11042.260, num_updates=25181, lr=0.0011273, gnorm=0.199, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 061 | loss 3.809 | nll_loss 2.287 | ppl 4.88 | wps 161597 | ups 0 | wpb 395790.000 | bsz 10636.667 | num_updates 25193 | lr 0.00112703 | gnorm 0.215 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 061 | valid on 'valid' subset | loss 3.493 | nll_loss 1.889 | ppl 3.70 | num_updates 25193 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint61.pt (epoch 61 @ 25193 updates) (writing took 3.386782646179199 seconds)
+| epoch 062:    100 / 413 loss=3.805, nll_loss=2.283, ppl=4.87, wps=161029, ups=0, wpb=404685.970, bsz=10950.495, num_updates=25294, lr=0.00112478, gnorm=0.210, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 062:    200 / 413 loss=3.830, nll_loss=2.311, ppl=4.96, wps=160728, ups=0, wpb=403750.300, bsz=10901.620, num_updates=25394, lr=0.00112256, gnorm=0.202, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 062:    300 / 413 loss=3.831, nll_loss=2.312, ppl=4.97, wps=161071, ups=0, wpb=403915.830, bsz=10864.800, num_updates=25494, lr=0.00112036, gnorm=0.214, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 062:    400 / 413 loss=3.841, nll_loss=2.324, ppl=5.01, wps=163537, ups=0, wpb=404572.990, bsz=10865.360, num_updates=25594, lr=0.00111817, gnorm=0.199, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 062 | loss 3.817 | nll_loss 2.296 | ppl 4.91 | wps 163669 | ups 0 | wpb 399991.333 | bsz 10963.250 | num_updates 25606 | lr 0.0011179 | gnorm 0.215 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 062 | valid on 'valid' subset | loss 3.487 | nll_loss 1.887 | ppl 3.70 | num_updates 25606 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint62.pt (epoch 62 @ 25606 updates) (writing took 2.8069374561309814 seconds)
+| epoch 063:    100 / 413 loss=3.807, nll_loss=2.285, ppl=4.87, wps=160955, ups=0, wpb=404818.059, bsz=10928.554, num_updates=25707, lr=0.0011157, gnorm=0.206, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 063:    200 / 413 loss=3.828, nll_loss=2.308, ppl=4.95, wps=160610, ups=0, wpb=403573.270, bsz=10827.040, num_updates=25807, lr=0.00111354, gnorm=0.207, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 063:    300 / 413 loss=3.836, nll_loss=2.317, ppl=4.98, wps=160526, ups=0, wpb=404268.540, bsz=10913.360, num_updates=25907, lr=0.00111139, gnorm=0.199, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 063:    400 / 413 loss=3.828, nll_loss=2.309, ppl=4.96, wps=160657, ups=0, wpb=404488.690, bsz=10910.010, num_updates=26007, lr=0.00110925, gnorm=0.201, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 063 | loss 3.807 | nll_loss 2.286 | ppl 4.88 | wps 160017 | ups 0 | wpb 398118.083 | bsz 10992.667 | num_updates 26019 | lr 0.001109 | gnorm 0.195 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 063 | valid on 'valid' subset | loss 3.492 | nll_loss 1.883 | ppl 3.69 | num_updates 26019 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint63.pt (epoch 63 @ 26019 updates) (writing took 3.0513265132904053 seconds)
+| epoch 064:    100 / 413 loss=3.819, nll_loss=2.298, ppl=4.92, wps=160717, ups=0, wpb=404080.079, bsz=10959.604, num_updates=26120, lr=0.00110685, gnorm=0.214, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 064:    200 / 413 loss=3.816, nll_loss=2.295, ppl=4.91, wps=161101, ups=0, wpb=405351.270, bsz=10900.950, num_updates=26220, lr=0.00110474, gnorm=0.207, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 064:    300 / 413 loss=3.822, nll_loss=2.302, ppl=4.93, wps=160592, ups=0, wpb=403784.600, bsz=10881.120, num_updates=26320, lr=0.00110264, gnorm=0.206, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 064:    400 / 413 loss=3.832, nll_loss=2.313, ppl=4.97, wps=160379, ups=0, wpb=403701.170, bsz=10885.860, num_updates=26420, lr=0.00110055, gnorm=0.208, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 064 | loss 3.819 | nll_loss 2.298 | ppl 4.92 | wps 160708 | ups 0 | wpb 400108.250 | bsz 10585.333 | num_updates 26432 | lr 0.0011003 | gnorm 0.235 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 064 | valid on 'valid' subset | loss 3.491 | nll_loss 1.882 | ppl 3.69 | num_updates 26432 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint64.pt (epoch 64 @ 26432 updates) (writing took 3.061293363571167 seconds)
+| epoch 065:    100 / 413 loss=3.819, nll_loss=2.298, ppl=4.92, wps=160141, ups=0, wpb=403307.921, bsz=10819.168, num_updates=26533, lr=0.0010982, gnorm=0.208, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 065:    200 / 413 loss=3.815, nll_loss=2.294, ppl=4.90, wps=161376, ups=0, wpb=404620.470, bsz=10993.370, num_updates=26633, lr=0.00109614, gnorm=0.204, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 065:    300 / 413 loss=3.820, nll_loss=2.299, ppl=4.92, wps=163535, ups=0, wpb=404714.000, bsz=10893.280, num_updates=26733, lr=0.00109409, gnorm=0.209, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 065:    400 / 413 loss=3.822, nll_loss=2.302, ppl=4.93, wps=160792, ups=0, wpb=404516.400, bsz=10899.280, num_updates=26833, lr=0.00109204, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 065 | loss 3.854 | nll_loss 2.339 | ppl 5.06 | wps 160368 | ups 0 | wpb 398158.667 | bsz 10784.000 | num_updates 26845 | lr 0.0010918 | gnorm 0.202 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 065 | valid on 'valid' subset | loss 3.485 | nll_loss 1.883 | ppl 3.69 | num_updates 26845 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint65.pt (epoch 65 @ 26845 updates) (writing took 2.961894989013672 seconds)
+| epoch 066:    100 / 413 loss=3.805, nll_loss=2.282, ppl=4.86, wps=160793, ups=0, wpb=404613.465, bsz=10895.683, num_updates=26946, lr=0.00108975, gnorm=0.204, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 066:    200 / 413 loss=3.822, nll_loss=2.301, ppl=4.93, wps=160698, ups=0, wpb=404462.570, bsz=10882.420, num_updates=27046, lr=0.00108774, gnorm=0.208, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 066:    300 / 413 loss=3.814, nll_loss=2.293, ppl=4.90, wps=160581, ups=0, wpb=404247.690, bsz=10931.750, num_updates=27146, lr=0.00108573, gnorm=0.198, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 066:    400 / 413 loss=3.834, nll_loss=2.316, ppl=4.98, wps=160283, ups=0, wpb=403703.570, bsz=10896.960, num_updates=27246, lr=0.00108374, gnorm=0.205, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 066 | loss 3.796 | nll_loss 2.273 | ppl 4.83 | wps 161698 | ups 0 | wpb 399145.667 | bsz 10763.333 | num_updates 27258 | lr 0.0010835 | gnorm 0.231 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 066 | valid on 'valid' subset | loss 3.487 | nll_loss 1.877 | ppl 3.67 | num_updates 27258 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint66.pt (epoch 66 @ 27258 updates) (writing took 2.8555195331573486 seconds)
+| epoch 067:    100 / 413 loss=3.803, nll_loss=2.280, ppl=4.86, wps=160722, ups=0, wpb=404543.990, bsz=10898.772, num_updates=27359, lr=0.0010815, gnorm=0.210, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 067:    200 / 413 loss=3.804, nll_loss=2.282, ppl=4.86, wps=161005, ups=0, wpb=404157.000, bsz=10928.150, num_updates=27459, lr=0.00107952, gnorm=0.202, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 067:    300 / 413 loss=3.830, nll_loss=2.312, ppl=4.96, wps=161735, ups=0, wpb=404590.370, bsz=10961.360, num_updates=27559, lr=0.00107756, gnorm=0.218, clip=0.000, oom=0.000, wall=250, train_wall=236
+resetting loss stats
+| epoch 067:    400 / 413 loss=3.825, nll_loss=2.305, ppl=4.94, wps=163419, ups=0, wpb=404352.490, bsz=10842.180, num_updates=27659, lr=0.00107561, gnorm=0.211, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 067 | loss 3.823 | nll_loss 2.304 | ppl 4.94 | wps 161359 | ups 0 | wpb 394013.500 | bsz 10566.000 | num_updates 27671 | lr 0.00107538 | gnorm 0.187 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 067 | valid on 'valid' subset | loss 3.483 | nll_loss 1.877 | ppl 3.67 | num_updates 27671 | best_loss 3.48225
+| saved checkpoint model-save-dir/checkpoint67.pt (epoch 67 @ 27671 updates) (writing took 3.1195311546325684 seconds)
+| epoch 068:    100 / 413 loss=3.803, nll_loss=2.280, ppl=4.86, wps=160958, ups=0, wpb=404449.564, bsz=10830.099, num_updates=27772, lr=0.00107342, gnorm=0.217, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 068:    200 / 413 loss=3.810, nll_loss=2.289, ppl=4.89, wps=160793, ups=0, wpb=404689.010, bsz=10977.280, num_updates=27872, lr=0.0010715, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 068:    300 / 413 loss=3.826, nll_loss=2.307, ppl=4.95, wps=160684, ups=0, wpb=403583.880, bsz=10894.470, num_updates=27972, lr=0.00106958, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 068:    400 / 413 loss=3.817, nll_loss=2.296, ppl=4.91, wps=160772, ups=0, wpb=404358.510, bsz=10945.380, num_updates=28072, lr=0.00106767, gnorm=0.202, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 068 | loss 3.808 | nll_loss 2.287 | ppl 4.88 | wps 160492 | ups 0 | wpb 398712.083 | bsz 10432.000 | num_updates 28084 | lr 0.00106744 | gnorm 0.199 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 068 | valid on 'valid' subset | loss 3.482 | nll_loss 1.872 | ppl 3.66 | num_updates 28084 | best_loss 3.48198
+| saved checkpoint model-save-dir/checkpoint68.pt (epoch 68 @ 28084 updates) (writing took 4.245844125747681 seconds)
+| epoch 069:    100 / 413 loss=3.808, nll_loss=2.286, ppl=4.88, wps=160639, ups=0, wpb=404432.307, bsz=10861.941, num_updates=28185, lr=0.00106553, gnorm=0.208, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 069:    200 / 413 loss=3.808, nll_loss=2.287, ppl=4.88, wps=163020, ups=0, wpb=404731.450, bsz=10943.430, num_updates=28285, lr=0.00106365, gnorm=0.202, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 069:    300 / 413 loss=3.818, nll_loss=2.297, ppl=4.92, wps=161088, ups=0, wpb=403586.250, bsz=10892.560, num_updates=28385, lr=0.00106177, gnorm=0.206, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 069:    400 / 413 loss=3.812, nll_loss=2.291, ppl=4.89, wps=163447, ups=0, wpb=404432.640, bsz=10947.300, num_updates=28485, lr=0.0010599, gnorm=0.204, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 069 | loss 3.822 | nll_loss 2.302 | ppl 4.93 | wps 160830 | ups 0 | wpb 397866.167 | bsz 10446.000 | num_updates 28497 | lr 0.00105968 | gnorm 0.212 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 069 | valid on 'valid' subset | loss 3.479 | nll_loss 1.870 | ppl 3.65 | num_updates 28497 | best_loss 3.47944
+| saved checkpoint model-save-dir/checkpoint69.pt (epoch 69 @ 28497 updates) (writing took 4.524859428405762 seconds)
+| epoch 070:    100 / 413 loss=3.805, nll_loss=2.282, ppl=4.86, wps=160920, ups=0, wpb=404245.307, bsz=10852.614, num_updates=28598, lr=0.00105781, gnorm=0.211, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 070:    200 / 413 loss=3.797, nll_loss=2.274, ppl=4.84, wps=160848, ups=0, wpb=405450.900, bsz=10963.750, num_updates=28698, lr=0.00105596, gnorm=0.197, clip=0.000, oom=0.000, wall=252, train_wall=236
+resetting loss stats
+| epoch 070:    300 / 413 loss=3.814, nll_loss=2.293, ppl=4.90, wps=160675, ups=0, wpb=404085.090, bsz=11026.720, num_updates=28798, lr=0.00105413, gnorm=0.211, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 070:    400 / 413 loss=3.819, nll_loss=2.299, ppl=4.92, wps=162702, ups=0, wpb=403765.950, bsz=10785.520, num_updates=28898, lr=0.0010523, gnorm=0.205, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 070 | loss 3.849 | nll_loss 2.333 | ppl 5.04 | wps 159993 | ups 0 | wpb 394843.417 | bsz 10585.333 | num_updates 28910 | lr 0.00105209 | gnorm 0.205 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 070 | valid on 'valid' subset | loss 3.480 | nll_loss 1.869 | ppl 3.65 | num_updates 28910 | best_loss 3.47944
+| saved checkpoint model-save-dir/checkpoint70.pt (epoch 70 @ 28910 updates) (writing took 3.215801477432251 seconds)
+| epoch 071:    100 / 413 loss=3.802, nll_loss=2.280, ppl=4.86, wps=161605, ups=0, wpb=404440.653, bsz=10843.010, num_updates=29011, lr=0.00105025, gnorm=0.209, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 071:    200 / 413 loss=3.808, nll_loss=2.286, ppl=4.88, wps=162921, ups=0, wpb=403939.790, bsz=10911.110, num_updates=29111, lr=0.00104845, gnorm=0.209, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 071:    300 / 413 loss=3.814, nll_loss=2.293, ppl=4.90, wps=163067, ups=0, wpb=404275.730, bsz=10933.460, num_updates=29211, lr=0.00104665, gnorm=0.209, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 071:    400 / 413 loss=3.807, nll_loss=2.286, ppl=4.88, wps=163126, ups=0, wpb=404437.060, bsz=10936.960, num_updates=29311, lr=0.00104486, gnorm=0.210, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 071 | loss 3.814 | nll_loss 2.294 | ppl 4.90 | wps 162218 | ups 0 | wpb 398610.583 | bsz 10620.000 | num_updates 29323 | lr 0.00104465 | gnorm 0.199 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 071 | valid on 'valid' subset | loss 3.480 | nll_loss 1.876 | ppl 3.67 | num_updates 29323 | best_loss 3.47944
+| saved checkpoint model-save-dir/checkpoint71.pt (epoch 71 @ 29323 updates) (writing took 3.35719633102417 seconds)
+| epoch 072:    100 / 413 loss=3.803, nll_loss=2.281, ppl=4.86, wps=161014, ups=0, wpb=405114.990, bsz=10908.911, num_updates=29424, lr=0.00104286, gnorm=0.212, clip=0.000, oom=0.000, wall=290, train_wall=266
+resetting loss stats
+| epoch 072:    200 / 413 loss=3.792, nll_loss=2.268, ppl=4.82, wps=160442, ups=0, wpb=404056.010, bsz=10858.730, num_updates=29524, lr=0.00104109, gnorm=0.203, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 072:    300 / 413 loss=3.812, nll_loss=2.291, ppl=4.89, wps=160520, ups=0, wpb=404282.420, bsz=10938.320, num_updates=29624, lr=0.00103933, gnorm=0.202, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 072:    400 / 413 loss=3.817, nll_loss=2.296, ppl=4.91, wps=160648, ups=0, wpb=403854.770, bsz=10892.480, num_updates=29724, lr=0.00103758, gnorm=0.204, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 072 | loss 3.821 | nll_loss 2.302 | ppl 4.93 | wps 160231 | ups 0 | wpb 396763.083 | bsz 10832.000 | num_updates 29736 | lr 0.00103737 | gnorm 0.219 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 072 | valid on 'valid' subset | loss 3.476 | nll_loss 1.874 | ppl 3.67 | num_updates 29736 | best_loss 3.47552
+| saved checkpoint model-save-dir/checkpoint72.pt (epoch 72 @ 29736 updates) (writing took 4.161107540130615 seconds)
+| epoch 073:    100 / 413 loss=3.796, nll_loss=2.273, ppl=4.83, wps=161513, ups=0, wpb=404945.554, bsz=10902.327, num_updates=29837, lr=0.00103561, gnorm=0.213, clip=0.000, oom=0.000, wall=290, train_wall=266
+resetting loss stats
+| epoch 073:    200 / 413 loss=3.800, nll_loss=2.278, ppl=4.85, wps=162052, ups=0, wpb=403164.480, bsz=10869.920, num_updates=29937, lr=0.00103388, gnorm=0.209, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 073:    300 / 413 loss=3.810, nll_loss=2.289, ppl=4.89, wps=161088, ups=0, wpb=405007.940, bsz=10900.660, num_updates=30037, lr=0.00103216, gnorm=0.209, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 073:    400 / 413 loss=3.810, nll_loss=2.289, ppl=4.89, wps=160930, ups=0, wpb=404091.300, bsz=10936.160, num_updates=30137, lr=0.00103045, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 073 | loss 3.813 | nll_loss 2.293 | ppl 4.90 | wps 160518 | ups 0 | wpb 397601.500 | bsz 10744.000 | num_updates 30149 | lr 0.00103024 | gnorm 0.216 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 073 | valid on 'valid' subset | loss 3.478 | nll_loss 1.872 | ppl 3.66 | num_updates 30149 | best_loss 3.47552
+| saved checkpoint model-save-dir/checkpoint73.pt (epoch 73 @ 30149 updates) (writing took 3.035637855529785 seconds)
+| epoch 074:    100 / 413 loss=3.787, nll_loss=2.263, ppl=4.80, wps=161170, ups=0, wpb=405231.733, bsz=10924.030, num_updates=30250, lr=0.00102852, gnorm=0.211, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 074:    200 / 413 loss=3.800, nll_loss=2.277, ppl=4.85, wps=160293, ups=0, wpb=403646.840, bsz=10954.160, num_updates=30350, lr=0.00102682, gnorm=0.202, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 074:    300 / 413 loss=3.813, nll_loss=2.292, ppl=4.90, wps=160622, ups=0, wpb=403654.750, bsz=10884.240, num_updates=30450, lr=0.00102514, gnorm=0.211, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 074:    400 / 413 loss=3.810, nll_loss=2.289, ppl=4.89, wps=160975, ups=0, wpb=404722.900, bsz=10854.340, num_updates=30550, lr=0.00102346, gnorm=0.212, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 074 | loss 3.812 | nll_loss 2.291 | ppl 4.90 | wps 159881 | ups 0 | wpb 397186.417 | bsz 10678.000 | num_updates 30562 | lr 0.00102326 | gnorm 0.205 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 074 | valid on 'valid' subset | loss 3.483 | nll_loss 1.878 | ppl 3.67 | num_updates 30562 | best_loss 3.47552
+| saved checkpoint model-save-dir/checkpoint74.pt (epoch 74 @ 30562 updates) (writing took 3.2089931964874268 seconds)
+| epoch 075:    100 / 413 loss=3.794, nll_loss=2.270, ppl=4.82, wps=162046, ups=0, wpb=404198.079, bsz=10906.851, num_updates=30663, lr=0.00102157, gnorm=0.207, clip=0.000, oom=0.000, wall=288, train_wall=265
+resetting loss stats
+| epoch 075:    200 / 413 loss=3.804, nll_loss=2.282, ppl=4.86, wps=163319, ups=0, wpb=404489.270, bsz=10840.340, num_updates=30763, lr=0.00101991, gnorm=0.214, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 075:    300 / 413 loss=3.800, nll_loss=2.277, ppl=4.85, wps=160867, ups=0, wpb=403986.030, bsz=10958.320, num_updates=30863, lr=0.00101825, gnorm=0.210, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 075:    400 / 413 loss=3.809, nll_loss=2.288, ppl=4.88, wps=161096, ups=0, wpb=404644.200, bsz=10934.390, num_updates=30963, lr=0.00101661, gnorm=0.208, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 075 | loss 3.786 | nll_loss 2.263 | ppl 4.80 | wps 162860 | ups 0 | wpb 396761.250 | bsz 10486.667 | num_updates 30975 | lr 0.00101641 | gnorm 0.198 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 075 | valid on 'valid' subset | loss 3.473 | nll_loss 1.867 | ppl 3.65 | num_updates 30975 | best_loss 3.47262
+| saved checkpoint model-save-dir/checkpoint75.pt (epoch 75 @ 30975 updates) (writing took 4.498672008514404 seconds)
+| epoch 076:    100 / 413 loss=3.795, nll_loss=2.272, ppl=4.83, wps=160812, ups=0, wpb=404106.030, bsz=10815.515, num_updates=31076, lr=0.00101476, gnorm=0.206, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 076:    200 / 413 loss=3.800, nll_loss=2.277, ppl=4.85, wps=160738, ups=0, wpb=404751.760, bsz=10959.860, num_updates=31176, lr=0.00101313, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 076:    300 / 413 loss=3.801, nll_loss=2.279, ppl=4.86, wps=160695, ups=0, wpb=404096.090, bsz=10928.400, num_updates=31276, lr=0.00101151, gnorm=0.215, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 076:    400 / 413 loss=3.804, nll_loss=2.282, ppl=4.86, wps=161132, ups=0, wpb=404165.980, bsz=10877.520, num_updates=31376, lr=0.00100989, gnorm=0.210, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 076 | loss 3.771 | nll_loss 2.246 | ppl 4.75 | wps 161318 | ups 0 | wpb 398416.583 | bsz 10982.667 | num_updates 31388 | lr 0.0010097 | gnorm 0.196 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 076 | valid on 'valid' subset | loss 3.471 | nll_loss 1.865 | ppl 3.64 | num_updates 31388 | best_loss 3.47052
+| saved checkpoint model-save-dir/checkpoint76.pt (epoch 76 @ 31388 updates) (writing took 4.369168519973755 seconds)
+| epoch 077:    100 / 413 loss=3.800, nll_loss=2.277, ppl=4.85, wps=160774, ups=0, wpb=404475.911, bsz=10868.832, num_updates=31489, lr=0.00100808, gnorm=0.220, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 077:    200 / 413 loss=3.792, nll_loss=2.268, ppl=4.82, wps=160515, ups=0, wpb=404303.790, bsz=10984.170, num_updates=31589, lr=0.00100648, gnorm=0.202, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 077:    300 / 413 loss=3.783, nll_loss=2.259, ppl=4.79, wps=162939, ups=0, wpb=404055.400, bsz=10864.480, num_updates=31689, lr=0.0010049, gnorm=0.216, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 077:    400 / 413 loss=3.811, nll_loss=2.291, ppl=4.89, wps=161188, ups=0, wpb=404237.850, bsz=10894.320, num_updates=31789, lr=0.00100331, gnorm=0.215, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 077 | loss 3.835 | nll_loss 2.318 | ppl 4.99 | wps 161121 | ups 0 | wpb 398776.667 | bsz 10724.000 | num_updates 31801 | lr 0.00100312 | gnorm 0.202 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 077 | valid on 'valid' subset | loss 3.465 | nll_loss 1.860 | ppl 3.63 | num_updates 31801 | best_loss 3.4651
+| saved checkpoint model-save-dir/checkpoint77.pt (epoch 77 @ 31801 updates) (writing took 4.487466812133789 seconds)
+| epoch 078:    100 / 413 loss=3.791, nll_loss=2.267, ppl=4.81, wps=160408, ups=0, wpb=403454.366, bsz=10874.950, num_updates=31902, lr=0.00100153, gnorm=0.215, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 078:    200 / 413 loss=3.785, nll_loss=2.261, ppl=4.79, wps=160597, ups=0, wpb=404615.840, bsz=10997.750, num_updates=32002, lr=0.000999969, gnorm=0.209, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 078:    300 / 413 loss=3.816, nll_loss=2.296, ppl=4.91, wps=163046, ups=0, wpb=404502.220, bsz=10849.360, num_updates=32102, lr=0.00099841, gnorm=0.206, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 078:    400 / 413 loss=3.792, nll_loss=2.269, ppl=4.82, wps=163424, ups=0, wpb=404896.820, bsz=10876.960, num_updates=32202, lr=0.000996859, gnorm=0.211, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 078 | loss 3.796 | nll_loss 2.274 | ppl 4.84 | wps 162048 | ups 0 | wpb 395559.333 | bsz 10830.000 | num_updates 32214 | lr 0.000996673 | gnorm 0.195 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 078 | valid on 'valid' subset | loss 3.469 | nll_loss 1.867 | ppl 3.65 | num_updates 32214 | best_loss 3.4651
+| saved checkpoint model-save-dir/checkpoint78.pt (epoch 78 @ 32214 updates) (writing took 2.752319812774658 seconds)
+| epoch 079:    100 / 413 loss=3.787, nll_loss=2.263, ppl=4.80, wps=160964, ups=0, wpb=403560.050, bsz=10858.762, num_updates=32315, lr=0.000995114, gnorm=0.209, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 079:    200 / 413 loss=3.793, nll_loss=2.270, ppl=4.82, wps=161549, ups=0, wpb=404379.370, bsz=10924.480, num_updates=32415, lr=0.000993578, gnorm=0.212, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 079:    300 / 413 loss=3.801, nll_loss=2.279, ppl=4.85, wps=161504, ups=0, wpb=405278.590, bsz=10915.620, num_updates=32515, lr=0.000992049, gnorm=0.210, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 079:    400 / 413 loss=3.797, nll_loss=2.275, ppl=4.84, wps=160778, ups=0, wpb=404063.450, bsz=10936.720, num_updates=32615, lr=0.000990527, gnorm=0.211, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 079 | loss 3.792 | nll_loss 2.269 | ppl 4.82 | wps 160921 | ups 0 | wpb 397115.417 | bsz 10526.667 | num_updates 32627 | lr 0.000990345 | gnorm 0.228 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 079 | valid on 'valid' subset | loss 3.482 | nll_loss 1.879 | ppl 3.68 | num_updates 32627 | best_loss 3.4651
+| saved checkpoint model-save-dir/checkpoint79.pt (epoch 79 @ 32627 updates) (writing took 3.6853373050689697 seconds)
+| epoch 080:    100 / 413 loss=3.791, nll_loss=2.268, ppl=4.82, wps=161390, ups=0, wpb=403162.554, bsz=10921.812, num_updates=32728, lr=0.000988815, gnorm=0.214, clip=0.000, oom=0.000, wall=289, train_wall=266
+resetting loss stats
+| epoch 080:    200 / 413 loss=3.786, nll_loss=2.263, ppl=4.80, wps=161136, ups=0, wpb=403757.960, bsz=10830.580, num_updates=32828, lr=0.000987308, gnorm=0.204, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 080:    300 / 413 loss=3.792, nll_loss=2.269, ppl=4.82, wps=161215, ups=0, wpb=405212.350, bsz=10895.360, num_updates=32928, lr=0.000985808, gnorm=0.215, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 080:    400 / 413 loss=3.801, nll_loss=2.279, ppl=4.85, wps=160598, ups=0, wpb=404675.540, bsz=10967.120, num_updates=33028, lr=0.000984314, gnorm=0.207, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 080 | loss 3.799 | nll_loss 2.278 | ppl 4.85 | wps 161098 | ups 0 | wpb 401090.667 | bsz 10694.000 | num_updates 33040 | lr 0.000984136 | gnorm 0.207 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 080 | valid on 'valid' subset | loss 3.464 | nll_loss 1.859 | ppl 3.63 | num_updates 33040 | best_loss 3.46355
+| saved checkpoint model-save-dir/checkpoint80.pt (epoch 80 @ 33040 updates) (writing took 4.560505151748657 seconds)
+| epoch 081:    100 / 413 loss=3.773, nll_loss=2.248, ppl=4.75, wps=163739, ups=0, wpb=405150.525, bsz=10936.406, num_updates=33141, lr=0.000982635, gnorm=0.210, clip=0.000, oom=0.000, wall=288, train_wall=264
+resetting loss stats
+| epoch 081:    200 / 413 loss=3.796, nll_loss=2.273, ppl=4.83, wps=162516, ups=0, wpb=404505.240, bsz=10942.080, num_updates=33241, lr=0.000981156, gnorm=0.210, clip=0.000, oom=0.000, wall=249, train_wall=234
+resetting loss stats
+| epoch 081:    300 / 413 loss=3.805, nll_loss=2.283, ppl=4.87, wps=160462, ups=0, wpb=403474.740, bsz=10891.120, num_updates=33341, lr=0.000979683, gnorm=0.213, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 081:    400 / 413 loss=3.793, nll_loss=2.270, ppl=4.82, wps=160970, ups=0, wpb=404176.270, bsz=10859.760, num_updates=33441, lr=0.000978217, gnorm=0.206, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 081 | loss 3.785 | nll_loss 2.262 | ppl 4.80 | wps 160304 | ups 0 | wpb 396771.917 | bsz 10572.000 | num_updates 33453 | lr 0.000978042 | gnorm 0.242 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 081 | valid on 'valid' subset | loss 3.470 | nll_loss 1.865 | ppl 3.64 | num_updates 33453 | best_loss 3.46355
+| saved checkpoint model-save-dir/checkpoint81.pt (epoch 81 @ 33453 updates) (writing took 3.7081336975097656 seconds)
+| epoch 082:    100 / 413 loss=3.770, nll_loss=2.245, ppl=4.74, wps=161058, ups=0, wpb=404316.911, bsz=10993.663, num_updates=33554, lr=0.000976569, gnorm=0.220, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 082:    200 / 413 loss=3.788, nll_loss=2.265, ppl=4.81, wps=161501, ups=0, wpb=403951.830, bsz=10915.540, num_updates=33654, lr=0.000975117, gnorm=0.229, clip=0.000, oom=0.000, wall=250, train_wall=234
+resetting loss stats
+| epoch 082:    300 / 413 loss=3.807, nll_loss=2.286, ppl=4.88, wps=160910, ups=0, wpb=404706.910, bsz=10824.630, num_updates=33754, lr=0.000973671, gnorm=0.206, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 082:    400 / 413 loss=3.791, nll_loss=2.268, ppl=4.82, wps=162012, ups=0, wpb=404354.800, bsz=10883.200, num_updates=33854, lr=0.000972232, gnorm=0.205, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 082 | loss 3.820 | nll_loss 2.301 | ppl 4.93 | wps 163400 | ups 0 | wpb 396644.083 | bsz 10670.000 | num_updates 33866 | lr 0.00097206 | gnorm 0.229 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 082 | valid on 'valid' subset | loss 3.468 | nll_loss 1.864 | ppl 3.64 | num_updates 33866 | best_loss 3.46355
+| saved checkpoint model-save-dir/checkpoint82.pt (epoch 82 @ 33866 updates) (writing took 3.2517175674438477 seconds)
+| epoch 083:    100 / 413 loss=3.782, nll_loss=2.258, ppl=4.78, wps=160769, ups=0, wpb=404336.089, bsz=10769.980, num_updates=33967, lr=0.000970614, gnorm=0.213, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 083:    200 / 413 loss=3.785, nll_loss=2.261, ppl=4.79, wps=161112, ups=0, wpb=404984.620, bsz=10978.000, num_updates=34067, lr=0.000969188, gnorm=0.219, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 083:    300 / 413 loss=3.790, nll_loss=2.267, ppl=4.81, wps=160439, ups=0, wpb=403467.010, bsz=10917.030, num_updates=34167, lr=0.000967769, gnorm=0.206, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 083:    400 / 413 loss=3.792, nll_loss=2.269, ppl=4.82, wps=160690, ups=0, wpb=404361.340, bsz=10972.740, num_updates=34267, lr=0.000966356, gnorm=0.217, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 083 | loss 3.833 | nll_loss 2.315 | ppl 4.97 | wps 160349 | ups 0 | wpb 398154.083 | bsz 10516.000 | num_updates 34279 | lr 0.000966186 | gnorm 0.215 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 083 | valid on 'valid' subset | loss 3.466 | nll_loss 1.862 | ppl 3.64 | num_updates 34279 | best_loss 3.46355
+| saved checkpoint model-save-dir/checkpoint83.pt (epoch 83 @ 34279 updates) (writing took 3.3613924980163574 seconds)
+| epoch 084:    100 / 413 loss=3.769, nll_loss=2.243, ppl=4.73, wps=160680, ups=0, wpb=404270.941, bsz=11013.693, num_updates=34380, lr=0.000964766, gnorm=0.214, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 084:    200 / 413 loss=3.791, nll_loss=2.268, ppl=4.82, wps=162654, ups=0, wpb=403133.760, bsz=10828.340, num_updates=34480, lr=0.000963366, gnorm=0.210, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 084:    300 / 413 loss=3.801, nll_loss=2.280, ppl=4.86, wps=163422, ups=0, wpb=404704.220, bsz=10828.640, num_updates=34580, lr=0.000961972, gnorm=0.230, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 084:    400 / 413 loss=3.786, nll_loss=2.263, ppl=4.80, wps=163037, ups=0, wpb=405095.980, bsz=10939.200, num_updates=34680, lr=0.000960584, gnorm=0.209, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 084 | loss 3.803 | nll_loss 2.282 | ppl 4.86 | wps 162708 | ups 0 | wpb 397694.167 | bsz 10728.000 | num_updates 34692 | lr 0.000960418 | gnorm 0.208 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 084 | valid on 'valid' subset | loss 3.463 | nll_loss 1.858 | ppl 3.63 | num_updates 34692 | best_loss 3.46291
+| saved checkpoint model-save-dir/checkpoint84.pt (epoch 84 @ 34692 updates) (writing took 6.419391870498657 seconds)
+| epoch 085:    100 / 413 loss=3.780, nll_loss=2.256, ppl=4.78, wps=160693, ups=0, wpb=403867.416, bsz=10801.287, num_updates=34793, lr=0.000959023, gnorm=0.226, clip=0.000, oom=0.000, wall=293, train_wall=265
+resetting loss stats
+| epoch 085:    200 / 413 loss=3.788, nll_loss=2.265, ppl=4.81, wps=160722, ups=0, wpb=403726.620, bsz=10859.750, num_updates=34893, lr=0.000957648, gnorm=0.218, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 085:    300 / 413 loss=3.787, nll_loss=2.264, ppl=4.80, wps=160811, ups=0, wpb=403805.240, bsz=10912.320, num_updates=34993, lr=0.000956279, gnorm=0.212, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 085:    400 / 413 loss=3.787, nll_loss=2.264, ppl=4.80, wps=161128, ups=0, wpb=405535.390, bsz=11016.480, num_updates=35093, lr=0.000954915, gnorm=0.209, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 085 | loss 3.791 | nll_loss 2.268 | ppl 4.82 | wps 161244 | ups 0 | wpb 399979.750 | bsz 10912.667 | num_updates 35105 | lr 0.000954752 | gnorm 0.231 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 085 | valid on 'valid' subset | loss 3.458 | nll_loss 1.855 | ppl 3.62 | num_updates 35105 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint85.pt (epoch 85 @ 35105 updates) (writing took 4.07096791267395 seconds)
+| epoch 086:    100 / 413 loss=3.768, nll_loss=2.242, ppl=4.73, wps=161148, ups=0, wpb=405218.446, bsz=11041.267, num_updates=35206, lr=0.000953381, gnorm=0.213, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 086:    200 / 413 loss=3.784, nll_loss=2.260, ppl=4.79, wps=161779, ups=0, wpb=403647.860, bsz=10865.620, num_updates=35306, lr=0.00095203, gnorm=0.209, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 086:    300 / 413 loss=3.778, nll_loss=2.253, ppl=4.77, wps=160695, ups=0, wpb=404517.700, bsz=10848.710, num_updates=35406, lr=0.000950685, gnorm=0.214, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 086:    400 / 413 loss=3.810, nll_loss=2.290, ppl=4.89, wps=161737, ups=0, wpb=403442.750, bsz=10828.800, num_updates=35506, lr=0.000949345, gnorm=0.217, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 086 | loss 3.773 | nll_loss 2.248 | ppl 4.75 | wps 162903 | ups 0 | wpb 400766.417 | bsz 10938.000 | num_updates 35518 | lr 0.000949185 | gnorm 0.228 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 086 | valid on 'valid' subset | loss 3.466 | nll_loss 1.862 | ppl 3.64 | num_updates 35518 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint86.pt (epoch 86 @ 35518 updates) (writing took 2.897399425506592 seconds)
+| epoch 087:    100 / 413 loss=3.776, nll_loss=2.251, ppl=4.76, wps=160719, ups=0, wpb=403832.950, bsz=10782.198, num_updates=35619, lr=0.000947838, gnorm=0.212, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 087:    200 / 413 loss=3.775, nll_loss=2.250, ppl=4.76, wps=160535, ups=0, wpb=404738.830, bsz=10945.600, num_updates=35719, lr=0.00094651, gnorm=0.207, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 087:    300 / 413 loss=3.789, nll_loss=2.266, ppl=4.81, wps=160703, ups=0, wpb=403698.460, bsz=10950.480, num_updates=35819, lr=0.000945188, gnorm=0.221, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 087:    400 / 413 loss=3.793, nll_loss=2.270, ppl=4.82, wps=162431, ups=0, wpb=404868.430, bsz=10943.990, num_updates=35919, lr=0.000943871, gnorm=0.215, clip=0.000, oom=0.000, wall=249, train_wall=234
+resetting loss stats
+| epoch 087 | loss 3.787 | nll_loss 2.264 | ppl 4.80 | wps 160402 | ups 0 | wpb 398282.583 | bsz 10644.000 | num_updates 35931 | lr 0.000943714 | gnorm 0.207 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 087 | valid on 'valid' subset | loss 3.460 | nll_loss 1.855 | ppl 3.62 | num_updates 35931 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint87.pt (epoch 87 @ 35931 updates) (writing took 3.0693812370300293 seconds)
+| epoch 088:    100 / 413 loss=3.778, nll_loss=2.253, ppl=4.77, wps=160634, ups=0, wpb=403906.693, bsz=10836.832, num_updates=36032, lr=0.00094239, gnorm=0.215, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 088:    200 / 413 loss=3.775, nll_loss=2.250, ppl=4.76, wps=160679, ups=0, wpb=404425.590, bsz=10958.320, num_updates=36132, lr=0.000941085, gnorm=0.211, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 088:    300 / 413 loss=3.781, nll_loss=2.257, ppl=4.78, wps=161187, ups=0, wpb=405224.650, bsz=10897.060, num_updates=36232, lr=0.000939786, gnorm=0.210, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 088:    400 / 413 loss=3.795, nll_loss=2.272, ppl=4.83, wps=162258, ups=0, wpb=403545.250, bsz=10904.150, num_updates=36332, lr=0.000938491, gnorm=0.211, clip=0.000, oom=0.000, wall=249, train_wall=234
+resetting loss stats
+| epoch 088 | loss 3.769 | nll_loss 2.244 | ppl 4.74 | wps 160132 | ups 0 | wpb 398580.500 | bsz 10855.333 | num_updates 36344 | lr 0.000938337 | gnorm 0.226 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 088 | valid on 'valid' subset | loss 3.461 | nll_loss 1.859 | ppl 3.63 | num_updates 36344 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint88.pt (epoch 88 @ 36344 updates) (writing took 3.385772705078125 seconds)
+| epoch 089:    100 / 413 loss=3.767, nll_loss=2.241, ppl=4.73, wps=160771, ups=0, wpb=404797.010, bsz=10975.594, num_updates=36445, lr=0.000937035, gnorm=0.218, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 089:    200 / 413 loss=3.778, nll_loss=2.253, ppl=4.77, wps=160777, ups=0, wpb=403876.200, bsz=10869.920, num_updates=36545, lr=0.000935753, gnorm=0.203, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 089:    300 / 413 loss=3.787, nll_loss=2.264, ppl=4.80, wps=160751, ups=0, wpb=404116.550, bsz=10836.720, num_updates=36645, lr=0.000934475, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 089:    400 / 413 loss=3.786, nll_loss=2.262, ppl=4.80, wps=160761, ups=0, wpb=404423.930, bsz=10916.580, num_updates=36745, lr=0.000933202, gnorm=0.216, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 089 | loss 3.829 | nll_loss 2.311 | ppl 4.96 | wps 159493 | ups 0 | wpb 397577.083 | bsz 10823.333 | num_updates 36757 | lr 0.00093305 | gnorm 0.218 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 089 | valid on 'valid' subset | loss 3.463 | nll_loss 1.858 | ppl 3.62 | num_updates 36757 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint89.pt (epoch 89 @ 36757 updates) (writing took 3.1574459075927734 seconds)
+| epoch 090:    100 / 413 loss=3.783, nll_loss=2.259, ppl=4.79, wps=160671, ups=0, wpb=403547.653, bsz=10901.713, num_updates=36858, lr=0.000931771, gnorm=0.213, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 090:    200 / 413 loss=3.777, nll_loss=2.253, ppl=4.77, wps=162105, ups=0, wpb=404585.450, bsz=10860.080, num_updates=36958, lr=0.000930509, gnorm=0.220, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 090:    300 / 413 loss=3.773, nll_loss=2.248, ppl=4.75, wps=164111, ups=0, wpb=405194.670, bsz=10950.560, num_updates=37058, lr=0.000929253, gnorm=0.206, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 090:    400 / 413 loss=3.785, nll_loss=2.261, ppl=4.79, wps=164001, ups=0, wpb=403847.930, bsz=10903.680, num_updates=37158, lr=0.000928002, gnorm=0.213, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 090 | loss 3.779 | nll_loss 2.255 | ppl 4.77 | wps 163642 | ups 0 | wpb 397997.750 | bsz 10686.000 | num_updates 37170 | lr 0.000927852 | gnorm 0.234 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 090 | valid on 'valid' subset | loss 3.460 | nll_loss 1.855 | ppl 3.62 | num_updates 37170 | best_loss 3.4585
+| saved checkpoint model-save-dir/checkpoint90.pt (epoch 90 @ 37170 updates) (writing took 3.396636486053467 seconds)
+| epoch 091:    100 / 413 loss=3.767, nll_loss=2.241, ppl=4.73, wps=162698, ups=0, wpb=404194.911, bsz=10970.059, num_updates=37271, lr=0.000926594, gnorm=0.209, clip=0.000, oom=0.000, wall=287, train_wall=264
+resetting loss stats
+| epoch 091:    200 / 413 loss=3.783, nll_loss=2.259, ppl=4.79, wps=164885, ups=0, wpb=405371.230, bsz=10811.140, num_updates=37371, lr=0.000925353, gnorm=0.217, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 091:    300 / 413 loss=3.787, nll_loss=2.263, ppl=4.80, wps=164180, ups=0, wpb=404035.790, bsz=10914.560, num_updates=37471, lr=0.000924118, gnorm=0.215, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 091:    400 / 413 loss=3.775, nll_loss=2.251, ppl=4.76, wps=164218, ups=0, wpb=404122.900, bsz=10927.840, num_updates=37571, lr=0.000922887, gnorm=0.218, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 091 | loss 3.795 | nll_loss 2.273 | ppl 4.83 | wps 159534 | ups 0 | wpb 393367.750 | bsz 10617.250 | num_updates 37583 | lr 0.00092274 | gnorm 0.197 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 091 | valid on 'valid' subset | loss 3.454 | nll_loss 1.850 | ppl 3.61 | num_updates 37583 | best_loss 3.45404
+| saved checkpoint model-save-dir/checkpoint91.pt (epoch 91 @ 37583 updates) (writing took 4.300664901733398 seconds)
+| epoch 092:    100 / 413 loss=3.778, nll_loss=2.253, ppl=4.77, wps=161825, ups=0, wpb=404208.653, bsz=10928.653, num_updates=37684, lr=0.000921502, gnorm=0.213, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 092:    200 / 413 loss=3.774, nll_loss=2.250, ppl=4.76, wps=161031, ups=0, wpb=404550.650, bsz=10895.840, num_updates=37784, lr=0.000920282, gnorm=0.215, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 092:    300 / 413 loss=3.788, nll_loss=2.264, ppl=4.80, wps=160686, ups=0, wpb=403698.010, bsz=10871.510, num_updates=37884, lr=0.000919067, gnorm=0.213, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 092:    400 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=160948, ups=0, wpb=404844.040, bsz=10915.520, num_updates=37984, lr=0.000917856, gnorm=0.219, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 092 | loss 3.747 | nll_loss 2.219 | ppl 4.66 | wps 160127 | ups 0 | wpb 396895.583 | bsz 10721.333 | num_updates 37996 | lr 0.000917711 | gnorm 0.245 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 092 | valid on 'valid' subset | loss 3.461 | nll_loss 1.859 | ppl 3.63 | num_updates 37996 | best_loss 3.45404
+| saved checkpoint model-save-dir/checkpoint92.pt (epoch 92 @ 37996 updates) (writing took 3.049518346786499 seconds)
+| epoch 093:    100 / 413 loss=3.767, nll_loss=2.241, ppl=4.73, wps=162146, ups=0, wpb=404071.000, bsz=10897.109, num_updates=38097, lr=0.000916494, gnorm=0.218, clip=0.000, oom=0.000, wall=287, train_wall=265
+resetting loss stats
+| epoch 093:    200 / 413 loss=3.778, nll_loss=2.254, ppl=4.77, wps=163580, ups=0, wpb=404782.250, bsz=10902.500, num_updates=38197, lr=0.000915293, gnorm=0.213, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 093:    300 / 413 loss=3.772, nll_loss=2.248, ppl=4.75, wps=162093, ups=0, wpb=404184.690, bsz=10975.520, num_updates=38297, lr=0.000914098, gnorm=0.210, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 093:    400 / 413 loss=3.787, nll_loss=2.264, ppl=4.80, wps=160685, ups=0, wpb=404236.790, bsz=10855.270, num_updates=38397, lr=0.000912907, gnorm=0.222, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 093 | loss 3.761 | nll_loss 2.235 | ppl 4.71 | wps 160199 | ups 0 | wpb 397128.917 | bsz 10566.667 | num_updates 38409 | lr 0.000912764 | gnorm 0.209 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 093 | valid on 'valid' subset | loss 3.452 | nll_loss 1.850 | ppl 3.61 | num_updates 38409 | best_loss 3.45246
+| saved checkpoint model-save-dir/checkpoint93.pt (epoch 93 @ 38409 updates) (writing took 4.258720636367798 seconds)
+| epoch 094:    100 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=160598, ups=0, wpb=404517.238, bsz=10827.030, num_updates=38510, lr=0.000911566, gnorm=0.217, clip=0.000, oom=0.000, wall=291, train_wall=266
+resetting loss stats
+| epoch 094:    200 / 413 loss=3.776, nll_loss=2.251, ppl=4.76, wps=163976, ups=0, wpb=404586.830, bsz=10916.720, num_updates=38610, lr=0.000910385, gnorm=0.219, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 094:    300 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=162873, ups=0, wpb=404607.870, bsz=10924.230, num_updates=38710, lr=0.000909208, gnorm=0.218, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 094:    400 / 413 loss=3.776, nll_loss=2.252, ppl=4.76, wps=160192, ups=0, wpb=403578.900, bsz=10961.600, num_updates=38810, lr=0.000908036, gnorm=0.215, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 094 | loss 3.794 | nll_loss 2.273 | ppl 4.83 | wps 160582 | ups 0 | wpb 396957.500 | bsz 10579.333 | num_updates 38822 | lr 0.000907896 | gnorm 0.227 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 094 | valid on 'valid' subset | loss 3.451 | nll_loss 1.846 | ppl 3.59 | num_updates 38822 | best_loss 3.4508
+| saved checkpoint model-save-dir/checkpoint94.pt (epoch 94 @ 38822 updates) (writing took 4.137765169143677 seconds)
+| epoch 095:    100 / 413 loss=3.770, nll_loss=2.245, ppl=4.74, wps=160891, ups=0, wpb=404596.267, bsz=10816.653, num_updates=38923, lr=0.000906717, gnorm=0.209, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 095:    200 / 413 loss=3.769, nll_loss=2.244, ppl=4.74, wps=162556, ups=0, wpb=404110.860, bsz=10979.680, num_updates=39023, lr=0.000905555, gnorm=0.214, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 095:    300 / 413 loss=3.778, nll_loss=2.254, ppl=4.77, wps=163083, ups=0, wpb=403450.420, bsz=10901.200, num_updates=39123, lr=0.000904397, gnorm=0.217, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 095:    400 / 413 loss=3.774, nll_loss=2.250, ppl=4.76, wps=161660, ups=0, wpb=404706.600, bsz=10910.550, num_updates=39223, lr=0.000903243, gnorm=0.224, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 095 | loss 3.790 | nll_loss 2.268 | ppl 4.82 | wps 161685 | ups 0 | wpb 400506.667 | bsz 10759.333 | num_updates 39235 | lr 0.000903105 | gnorm 0.211 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 095 | valid on 'valid' subset | loss 3.453 | nll_loss 1.848 | ppl 3.60 | num_updates 39235 | best_loss 3.4508
+| saved checkpoint model-save-dir/checkpoint95.pt (epoch 95 @ 39235 updates) (writing took 3.3676202297210693 seconds)
+| epoch 096:    100 / 413 loss=3.761, nll_loss=2.234, ppl=4.70, wps=160690, ups=0, wpb=404484.950, bsz=10897.178, num_updates=39336, lr=0.000901945, gnorm=0.218, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 096:    200 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=160914, ups=0, wpb=404755.680, bsz=10973.360, num_updates=39436, lr=0.0009008, gnorm=0.215, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 096:    300 / 413 loss=3.780, nll_loss=2.256, ppl=4.78, wps=160663, ups=0, wpb=403219.190, bsz=10820.980, num_updates=39536, lr=0.00089966, gnorm=0.219, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 096:    400 / 413 loss=3.774, nll_loss=2.249, ppl=4.75, wps=162572, ups=0, wpb=404754.630, bsz=10963.840, num_updates=39636, lr=0.000898525, gnorm=0.220, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 096 | loss 3.800 | nll_loss 2.279 | ppl 4.85 | wps 160430 | ups 0 | wpb 397596.750 | bsz 10358.667 | num_updates 39648 | lr 0.000898389 | gnorm 0.220 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 096 | valid on 'valid' subset | loss 3.462 | nll_loss 1.857 | ppl 3.62 | num_updates 39648 | best_loss 3.4508
+| saved checkpoint model-save-dir/checkpoint96.pt (epoch 96 @ 39648 updates) (writing took 3.2714452743530273 seconds)
+| epoch 097:    100 / 413 loss=3.765, nll_loss=2.239, ppl=4.72, wps=160481, ups=0, wpb=403958.891, bsz=10892.594, num_updates=39749, lr=0.000897247, gnorm=0.222, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 097:    200 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=160624, ups=0, wpb=403965.760, bsz=10924.180, num_updates=39849, lr=0.00089612, gnorm=0.220, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 097:    300 / 413 loss=3.768, nll_loss=2.243, ppl=4.73, wps=161022, ups=0, wpb=405062.050, bsz=10952.320, num_updates=39949, lr=0.000894998, gnorm=0.220, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 097:    400 / 413 loss=3.778, nll_loss=2.254, ppl=4.77, wps=160584, ups=0, wpb=404124.700, bsz=10861.110, num_updates=40049, lr=0.00089388, gnorm=0.219, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 097 | loss 3.787 | nll_loss 2.264 | ppl 4.80 | wps 160736 | ups 0 | wpb 398499.333 | bsz 10568.667 | num_updates 40061 | lr 0.000893746 | gnorm 0.225 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 097 | valid on 'valid' subset | loss 3.450 | nll_loss 1.847 | ppl 3.60 | num_updates 40061 | best_loss 3.44967
+| saved checkpoint model-save-dir/checkpoint97.pt (epoch 97 @ 40061 updates) (writing took 4.2780725955963135 seconds)
+| epoch 098:    100 / 413 loss=3.761, nll_loss=2.234, ppl=4.70, wps=160943, ups=0, wpb=403426.624, bsz=10840.891, num_updates=40162, lr=0.000892621, gnorm=0.217, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 098:    200 / 413 loss=3.770, nll_loss=2.245, ppl=4.74, wps=162622, ups=0, wpb=404643.570, bsz=10947.430, num_updates=40262, lr=0.000891512, gnorm=0.212, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 098:    300 / 413 loss=3.774, nll_loss=2.249, ppl=4.75, wps=163660, ups=0, wpb=405025.920, bsz=10907.680, num_updates=40362, lr=0.000890407, gnorm=0.219, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 098:    400 / 413 loss=3.777, nll_loss=2.253, ppl=4.77, wps=161711, ups=0, wpb=404068.420, bsz=10917.840, num_updates=40462, lr=0.000889306, gnorm=0.220, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 098 | loss 3.760 | nll_loss 2.234 | ppl 4.70 | wps 161256 | ups 0 | wpb 398100.917 | bsz 10709.333 | num_updates 40474 | lr 0.000889174 | gnorm 0.218 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 098 | valid on 'valid' subset | loss 3.449 | nll_loss 1.850 | ppl 3.60 | num_updates 40474 | best_loss 3.449
+| saved checkpoint model-save-dir/checkpoint98.pt (epoch 98 @ 40474 updates) (writing took 4.323312759399414 seconds)
+| epoch 099:    100 / 413 loss=3.764, nll_loss=2.238, ppl=4.72, wps=160987, ups=0, wpb=404701.267, bsz=10873.446, num_updates=40575, lr=0.000888067, gnorm=0.218, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 099:    200 / 413 loss=3.771, nll_loss=2.246, ppl=4.74, wps=160878, ups=0, wpb=403664.640, bsz=10843.920, num_updates=40675, lr=0.000886975, gnorm=0.211, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 099:    300 / 413 loss=3.764, nll_loss=2.238, ppl=4.72, wps=164214, ups=0, wpb=404621.380, bsz=10885.430, num_updates=40775, lr=0.000885886, gnorm=0.223, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 099:    400 / 413 loss=3.777, nll_loss=2.253, ppl=4.77, wps=161396, ups=0, wpb=404254.730, bsz=10993.760, num_updates=40875, lr=0.000884802, gnorm=0.215, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 099 | loss 3.778 | nll_loss 2.255 | ppl 4.77 | wps 160347 | ups 0 | wpb 397349.000 | bsz 10850.667 | num_updates 40887 | lr 0.000884672 | gnorm 0.216 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 099 | valid on 'valid' subset | loss 3.450 | nll_loss 1.843 | ppl 3.59 | num_updates 40887 | best_loss 3.449
+| saved checkpoint model-save-dir/checkpoint99.pt (epoch 99 @ 40887 updates) (writing took 3.1506080627441406 seconds)
+| epoch 100:    100 / 413 loss=3.759, nll_loss=2.232, ppl=4.70, wps=161011, ups=0, wpb=405206.495, bsz=10926.891, num_updates=40988, lr=0.000883582, gnorm=0.215, clip=0.000, oom=0.000, wall=290, train_wall=266
+resetting loss stats
+| epoch 100:    200 / 413 loss=3.770, nll_loss=2.245, ppl=4.74, wps=160733, ups=0, wpb=404310.150, bsz=10968.570, num_updates=41088, lr=0.000882506, gnorm=0.221, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 100:    300 / 413 loss=3.767, nll_loss=2.242, ppl=4.73, wps=160554, ups=0, wpb=403679.430, bsz=10850.800, num_updates=41188, lr=0.000881434, gnorm=0.215, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 100:    400 / 413 loss=3.771, nll_loss=2.246, ppl=4.74, wps=161768, ups=0, wpb=404128.110, bsz=10888.080, num_updates=41288, lr=0.000880366, gnorm=0.222, clip=0.000, oom=0.000, wall=250, train_wall=234
+resetting loss stats
+| epoch 100 | loss 3.817 | nll_loss 2.298 | ppl 4.92 | wps 160285 | ups 0 | wpb 396622.167 | bsz 10531.333 | num_updates 41300 | lr 0.000880238 | gnorm 0.215 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 100 | valid on 'valid' subset | loss 3.453 | nll_loss 1.850 | ppl 3.60 | num_updates 41300 | best_loss 3.449
+| saved checkpoint model-save-dir/checkpoint100.pt (epoch 100 @ 41300 updates) (writing took 3.0425024032592773 seconds)
+| epoch 101:    100 / 413 loss=3.755, nll_loss=2.228, ppl=4.68, wps=160852, ups=0, wpb=404806.069, bsz=10974.574, num_updates=41401, lr=0.000879163, gnorm=0.219, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 101:    200 / 413 loss=3.763, nll_loss=2.237, ppl=4.72, wps=161904, ups=0, wpb=404009.400, bsz=10913.600, num_updates=41501, lr=0.000878104, gnorm=0.212, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 101:    300 / 413 loss=3.766, nll_loss=2.241, ppl=4.73, wps=162819, ups=0, wpb=403973.460, bsz=10973.360, num_updates=41601, lr=0.000877047, gnorm=0.224, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 101:    400 / 413 loss=3.782, nll_loss=2.258, ppl=4.78, wps=163402, ups=0, wpb=404489.240, bsz=10773.350, num_updates=41701, lr=0.000875995, gnorm=0.213, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 101 | loss 3.791 | nll_loss 2.269 | ppl 4.82 | wps 162239 | ups 0 | wpb 397039.000 | bsz 10522.833 | num_updates 41713 | lr 0.000875869 | gnorm 0.211 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 101 | valid on 'valid' subset | loss 3.450 | nll_loss 1.848 | ppl 3.60 | num_updates 41713 | best_loss 3.449
+| saved checkpoint model-save-dir/checkpoint101.pt (epoch 101 @ 41713 updates) (writing took 2.8611855506896973 seconds)
+| epoch 102:    100 / 413 loss=3.757, nll_loss=2.230, ppl=4.69, wps=161154, ups=0, wpb=405011.267, bsz=10961.030, num_updates=41814, lr=0.000874811, gnorm=0.223, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 102:    200 / 413 loss=3.772, nll_loss=2.247, ppl=4.75, wps=160729, ups=0, wpb=404141.150, bsz=10822.320, num_updates=41914, lr=0.000873767, gnorm=0.223, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 102:    300 / 413 loss=3.762, nll_loss=2.236, ppl=4.71, wps=160536, ups=0, wpb=403809.600, bsz=10871.360, num_updates=42014, lr=0.000872726, gnorm=0.223, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 102:    400 / 413 loss=3.776, nll_loss=2.252, ppl=4.76, wps=160951, ups=0, wpb=404138.420, bsz=10957.830, num_updates=42114, lr=0.000871689, gnorm=0.224, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 102 | loss 3.751 | nll_loss 2.224 | ppl 4.67 | wps 160450 | ups 0 | wpb 398503.000 | bsz 10710.167 | num_updates 42126 | lr 0.000871565 | gnorm 0.225 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 102 | valid on 'valid' subset | loss 3.455 | nll_loss 1.852 | ppl 3.61 | num_updates 42126 | best_loss 3.449
+| saved checkpoint model-save-dir/checkpoint102.pt (epoch 102 @ 42126 updates) (writing took 3.5609323978424072 seconds)
+| epoch 103:    100 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=160427, ups=0, wpb=403923.139, bsz=10906.455, num_updates=42227, lr=0.000870522, gnorm=0.219, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 103:    200 / 413 loss=3.763, nll_loss=2.237, ppl=4.71, wps=160545, ups=0, wpb=404169.280, bsz=10865.360, num_updates=42327, lr=0.000869493, gnorm=0.218, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 103:    300 / 413 loss=3.773, nll_loss=2.249, ppl=4.75, wps=161133, ups=0, wpb=404633.930, bsz=10851.030, num_updates=42427, lr=0.000868468, gnorm=0.217, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 103:    400 / 413 loss=3.764, nll_loss=2.239, ppl=4.72, wps=162483, ups=0, wpb=404461.260, bsz=10940.720, num_updates=42527, lr=0.000867446, gnorm=0.217, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 103 | loss 3.765 | nll_loss 2.240 | ppl 4.72 | wps 162215 | ups 0 | wpb 397867.250 | bsz 11122.833 | num_updates 42539 | lr 0.000867324 | gnorm 0.229 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 103 | valid on 'valid' subset | loss 3.442 | nll_loss 1.843 | ppl 3.59 | num_updates 42539 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint103.pt (epoch 103 @ 42539 updates) (writing took 4.387754917144775 seconds)
+| epoch 104:    100 / 413 loss=3.764, nll_loss=2.238, ppl=4.72, wps=160393, ups=0, wpb=403792.040, bsz=10895.683, num_updates=42640, lr=0.000866296, gnorm=0.225, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 104:    200 / 413 loss=3.761, nll_loss=2.235, ppl=4.71, wps=160747, ups=0, wpb=404173.540, bsz=10883.530, num_updates=42740, lr=0.000865282, gnorm=0.216, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 104:    300 / 413 loss=3.763, nll_loss=2.238, ppl=4.72, wps=164200, ups=0, wpb=404458.050, bsz=10939.760, num_updates=42840, lr=0.000864272, gnorm=0.216, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 104:    400 / 413 loss=3.766, nll_loss=2.241, ppl=4.73, wps=161002, ups=0, wpb=404643.710, bsz=10893.840, num_updates=42940, lr=0.000863265, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 104 | loss 3.775 | nll_loss 2.252 | ppl 4.76 | wps 160594 | ups 0 | wpb 398880.417 | bsz 10713.333 | num_updates 42952 | lr 0.000863144 | gnorm 0.218 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 104 | valid on 'valid' subset | loss 3.449 | nll_loss 1.845 | ppl 3.59 | num_updates 42952 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint104.pt (epoch 104 @ 42952 updates) (writing took 3.2055535316467285 seconds)
+| epoch 105:    100 / 413 loss=3.761, nll_loss=2.235, ppl=4.71, wps=160718, ups=0, wpb=403273.515, bsz=10817.267, num_updates=43053, lr=0.000862131, gnorm=0.218, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 105:    200 / 413 loss=3.757, nll_loss=2.231, ppl=4.69, wps=161109, ups=0, wpb=405581.050, bsz=10952.080, num_updates=43153, lr=0.000861132, gnorm=0.220, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 105:    300 / 413 loss=3.774, nll_loss=2.250, ppl=4.76, wps=162903, ups=0, wpb=404494.820, bsz=10960.800, num_updates=43253, lr=0.000860135, gnorm=0.223, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 105:    400 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=161558, ups=0, wpb=404007.990, bsz=10887.130, num_updates=43353, lr=0.000859143, gnorm=0.233, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 105 | loss 3.780 | nll_loss 2.257 | ppl 4.78 | wps 159501 | ups 0 | wpb 396506.667 | bsz 10682.667 | num_updates 43365 | lr 0.000859024 | gnorm 0.221 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 105 | valid on 'valid' subset | loss 3.445 | nll_loss 1.842 | ppl 3.59 | num_updates 43365 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint105.pt (epoch 105 @ 43365 updates) (writing took 3.162662982940674 seconds)
+| epoch 106:    100 / 413 loss=3.756, nll_loss=2.229, ppl=4.69, wps=160384, ups=0, wpb=402957.208, bsz=10807.208, num_updates=43466, lr=0.000858025, gnorm=0.216, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 106:    200 / 413 loss=3.766, nll_loss=2.241, ppl=4.73, wps=161023, ups=0, wpb=404624.290, bsz=10982.310, num_updates=43566, lr=0.00085704, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 106:    300 / 413 loss=3.765, nll_loss=2.240, ppl=4.72, wps=160634, ups=0, wpb=404510.560, bsz=10868.560, num_updates=43666, lr=0.000856058, gnorm=0.221, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 106:    400 / 413 loss=3.758, nll_loss=2.232, ppl=4.70, wps=160911, ups=0, wpb=405142.610, bsz=10974.740, num_updates=43766, lr=0.00085508, gnorm=0.212, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 106 | loss 3.791 | nll_loss 2.269 | ppl 4.82 | wps 160823 | ups 0 | wpb 397555.583 | bsz 10554.000 | num_updates 43778 | lr 0.000854962 | gnorm 0.226 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 106 | valid on 'valid' subset | loss 3.450 | nll_loss 1.842 | ppl 3.59 | num_updates 43778 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint106.pt (epoch 106 @ 43778 updates) (writing took 3.008376359939575 seconds)
+| epoch 107:    100 / 413 loss=3.753, nll_loss=2.226, ppl=4.68, wps=161027, ups=0, wpb=404645.188, bsz=10923.485, num_updates=43879, lr=0.000853978, gnorm=0.223, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 107:    200 / 413 loss=3.767, nll_loss=2.242, ppl=4.73, wps=161812, ups=0, wpb=403773.660, bsz=10926.240, num_updates=43979, lr=0.000853006, gnorm=0.223, clip=0.000, oom=0.000, wall=250, train_wall=236
+resetting loss stats
+| epoch 107:    300 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=161226, ups=0, wpb=404107.540, bsz=10952.550, num_updates=44079, lr=0.000852038, gnorm=0.221, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 107:    400 / 413 loss=3.769, nll_loss=2.244, ppl=4.74, wps=164288, ups=0, wpb=404397.840, bsz=10831.700, num_updates=44179, lr=0.000851073, gnorm=0.225, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 107 | loss 3.739 | nll_loss 2.210 | ppl 4.63 | wps 160752 | ups 0 | wpb 400001.917 | bsz 10534.667 | num_updates 44191 | lr 0.000850958 | gnorm 0.210 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 107 | valid on 'valid' subset | loss 3.449 | nll_loss 1.845 | ppl 3.59 | num_updates 44191 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint107.pt (epoch 107 @ 44191 updates) (writing took 3.3258702754974365 seconds)
+| epoch 108:    100 / 413 loss=3.750, nll_loss=2.222, ppl=4.67, wps=160636, ups=0, wpb=404031.139, bsz=10878.812, num_updates=44292, lr=0.000849987, gnorm=0.226, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 108:    200 / 413 loss=3.756, nll_loss=2.229, ppl=4.69, wps=163341, ups=0, wpb=405309.490, bsz=10911.680, num_updates=44392, lr=0.000849029, gnorm=0.210, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 108:    300 / 413 loss=3.773, nll_loss=2.249, ppl=4.75, wps=163769, ups=0, wpb=404009.360, bsz=10829.610, num_updates=44492, lr=0.000848075, gnorm=0.226, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 108:    400 / 413 loss=3.762, nll_loss=2.237, ppl=4.71, wps=160250, ups=0, wpb=403687.430, bsz=10952.480, num_updates=44592, lr=0.000847123, gnorm=0.222, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 108 | loss 3.759 | nll_loss 2.234 | ppl 4.70 | wps 159210 | ups 0 | wpb 399109.833 | bsz 11050.000 | num_updates 44604 | lr 0.000847009 | gnorm 0.221 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 108 | valid on 'valid' subset | loss 3.457 | nll_loss 1.848 | ppl 3.60 | num_updates 44604 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint108.pt (epoch 108 @ 44604 updates) (writing took 5.374796628952026 seconds)
+| epoch 109:    100 / 413 loss=3.751, nll_loss=2.224, ppl=4.67, wps=161770, ups=0, wpb=403973.861, bsz=10931.564, num_updates=44705, lr=0.000846052, gnorm=0.219, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 109:    200 / 413 loss=3.769, nll_loss=2.244, ppl=4.74, wps=161542, ups=0, wpb=403720.490, bsz=10877.920, num_updates=44805, lr=0.000845107, gnorm=0.214, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 109:    300 / 413 loss=3.762, nll_loss=2.237, ppl=4.71, wps=162380, ups=0, wpb=404707.660, bsz=10933.530, num_updates=44905, lr=0.000844166, gnorm=0.226, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 109:    400 / 413 loss=3.754, nll_loss=2.228, ppl=4.68, wps=163156, ups=0, wpb=404533.390, bsz=10887.280, num_updates=45005, lr=0.000843227, gnorm=0.221, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 109 | loss 3.767 | nll_loss 2.243 | ppl 4.73 | wps 161435 | ups 0 | wpb 399964.750 | bsz 10564.667 | num_updates 45017 | lr 0.000843115 | gnorm 0.236 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 109 | valid on 'valid' subset | loss 3.446 | nll_loss 1.842 | ppl 3.59 | num_updates 45017 | best_loss 3.4417
+| saved checkpoint model-save-dir/checkpoint109.pt (epoch 109 @ 45017 updates) (writing took 3.5413155555725098 seconds)
+| epoch 110:    100 / 413 loss=3.744, nll_loss=2.216, ppl=4.65, wps=160759, ups=0, wpb=404313.149, bsz=10876.772, num_updates=45118, lr=0.000842171, gnorm=0.220, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 110:    200 / 413 loss=3.761, nll_loss=2.235, ppl=4.71, wps=160376, ups=0, wpb=403784.400, bsz=10944.000, num_updates=45218, lr=0.000841239, gnorm=0.220, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 110:    300 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=162504, ups=0, wpb=404078.760, bsz=10922.640, num_updates=45318, lr=0.00084031, gnorm=0.230, clip=0.000, oom=0.000, wall=249, train_wall=236
+resetting loss stats
+| epoch 110:    400 / 413 loss=3.769, nll_loss=2.245, ppl=4.74, wps=163331, ups=0, wpb=405343.610, bsz=10895.110, num_updates=45418, lr=0.000839385, gnorm=0.230, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 110 | loss 3.765 | nll_loss 2.240 | ppl 4.72 | wps 161625 | ups 0 | wpb 395065.500 | bsz 10500.667 | num_updates 45430 | lr 0.000839274 | gnorm 0.281 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 110 | valid on 'valid' subset | loss 3.441 | nll_loss 1.837 | ppl 3.57 | num_updates 45430 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint110.pt (epoch 110 @ 45430 updates) (writing took 4.3614561557769775 seconds)
+| epoch 111:    100 / 413 loss=3.755, nll_loss=2.228, ppl=4.68, wps=160685, ups=0, wpb=404052.406, bsz=10897.733, num_updates=45531, lr=0.000838342, gnorm=0.222, clip=0.000, oom=0.000, wall=291, train_wall=265
+resetting loss stats
+| epoch 111:    200 / 413 loss=3.750, nll_loss=2.223, ppl=4.67, wps=160624, ups=0, wpb=404961.380, bsz=10972.820, num_updates=45631, lr=0.000837423, gnorm=0.229, clip=0.000, oom=0.000, wall=252, train_wall=236
+resetting loss stats
+| epoch 111:    300 / 413 loss=3.764, nll_loss=2.238, ppl=4.72, wps=160825, ups=0, wpb=404227.060, bsz=10916.080, num_updates=45731, lr=0.000836507, gnorm=0.222, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 111:    400 / 413 loss=3.763, nll_loss=2.238, ppl=4.72, wps=160861, ups=0, wpb=403732.880, bsz=10831.680, num_updates=45831, lr=0.000835594, gnorm=0.221, clip=0.000, oom=0.000, wall=251, train_wall=234
+resetting loss stats
+| epoch 111 | loss 3.744 | nll_loss 2.216 | ppl 4.65 | wps 161987 | ups 0 | wpb 399638.833 | bsz 10667.333 | num_updates 45843 | lr 0.000835485 | gnorm 0.221 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 111 | valid on 'valid' subset | loss 3.451 | nll_loss 1.842 | ppl 3.59 | num_updates 45843 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint111.pt (epoch 111 @ 45843 updates) (writing took 3.454352855682373 seconds)
+| epoch 112:    100 / 413 loss=3.739, nll_loss=2.210, ppl=4.63, wps=162290, ups=0, wpb=404355.861, bsz=10930.376, num_updates=45944, lr=0.000834566, gnorm=0.227, clip=0.000, oom=0.000, wall=288, train_wall=266
+resetting loss stats
+| epoch 112:    200 / 413 loss=3.762, nll_loss=2.236, ppl=4.71, wps=162849, ups=0, wpb=403954.330, bsz=10949.120, num_updates=46044, lr=0.000833659, gnorm=0.228, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 112:    300 / 413 loss=3.764, nll_loss=2.239, ppl=4.72, wps=160655, ups=0, wpb=404179.050, bsz=10833.120, num_updates=46144, lr=0.000832755, gnorm=0.231, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 112:    400 / 413 loss=3.763, nll_loss=2.237, ppl=4.72, wps=161499, ups=0, wpb=404710.510, bsz=10912.180, num_updates=46244, lr=0.000831854, gnorm=0.220, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 112 | loss 3.759 | nll_loss 2.233 | ppl 4.70 | wps 162692 | ups 0 | wpb 397730.000 | bsz 10610.583 | num_updates 46256 | lr 0.000831746 | gnorm 0.223 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 112 | valid on 'valid' subset | loss 3.451 | nll_loss 1.848 | ppl 3.60 | num_updates 46256 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint112.pt (epoch 112 @ 46256 updates) (writing took 3.41847562789917 seconds)
+| epoch 113:    100 / 413 loss=3.747, nll_loss=2.220, ppl=4.66, wps=160698, ups=0, wpb=404734.871, bsz=10876.752, num_updates=46357, lr=0.00083084, gnorm=0.222, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 113:    200 / 413 loss=3.751, nll_loss=2.224, ppl=4.67, wps=161078, ups=0, wpb=404716.240, bsz=10940.330, num_updates=46457, lr=0.000829945, gnorm=0.214, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 113:    300 / 413 loss=3.757, nll_loss=2.231, ppl=4.69, wps=163896, ups=0, wpb=403893.590, bsz=10897.360, num_updates=46557, lr=0.000829053, gnorm=0.219, clip=0.000, oom=0.000, wall=246, train_wall=234
+resetting loss stats
+| epoch 113:    400 / 413 loss=3.763, nll_loss=2.238, ppl=4.72, wps=163970, ups=0, wpb=404193.390, bsz=10918.880, num_updates=46657, lr=0.000828164, gnorm=0.228, clip=0.000, oom=0.000, wall=247, train_wall=234
+resetting loss stats
+| epoch 113 | loss 3.800 | nll_loss 2.280 | ppl 4.86 | wps 163152 | ups 0 | wpb 394878.917 | bsz 10544.000 | num_updates 46669 | lr 0.000828058 | gnorm 0.218 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 113 | valid on 'valid' subset | loss 3.450 | nll_loss 1.843 | ppl 3.59 | num_updates 46669 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint113.pt (epoch 113 @ 46669 updates) (writing took 3.0631582736968994 seconds)
+| epoch 114:    100 / 413 loss=3.749, nll_loss=2.222, ppl=4.67, wps=160638, ups=0, wpb=404119.941, bsz=10887.525, num_updates=46770, lr=0.000827163, gnorm=0.217, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 114:    200 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=161323, ups=0, wpb=404943.520, bsz=10904.880, num_updates=46870, lr=0.000826281, gnorm=0.224, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 114:    300 / 413 loss=3.751, nll_loss=2.225, ppl=4.67, wps=160477, ups=0, wpb=404010.780, bsz=10897.280, num_updates=46970, lr=0.0008254, gnorm=0.218, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 114:    400 / 413 loss=3.762, nll_loss=2.237, ppl=4.71, wps=160690, ups=0, wpb=404111.590, bsz=10923.850, num_updates=47070, lr=0.000824523, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 114 | loss 3.737 | nll_loss 2.209 | ppl 4.62 | wps 160252 | ups 0 | wpb 397865.667 | bsz 10708.000 | num_updates 47082 | lr 0.000824418 | gnorm 0.219 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 114 | valid on 'valid' subset | loss 3.450 | nll_loss 1.846 | ppl 3.59 | num_updates 47082 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint114.pt (epoch 114 @ 47082 updates) (writing took 3.0268383026123047 seconds)
+| epoch 115:    100 / 413 loss=3.746, nll_loss=2.218, ppl=4.65, wps=162267, ups=0, wpb=405189.574, bsz=10974.911, num_updates=47183, lr=0.000823535, gnorm=0.225, clip=0.000, oom=0.000, wall=288, train_wall=265
+resetting loss stats
+| epoch 115:    200 / 413 loss=3.746, nll_loss=2.219, ppl=4.65, wps=160484, ups=0, wpb=404097.950, bsz=10880.630, num_updates=47283, lr=0.000822664, gnorm=0.224, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 115:    300 / 413 loss=3.757, nll_loss=2.230, ppl=4.69, wps=164220, ups=0, wpb=404129.140, bsz=10857.920, num_updates=47383, lr=0.000821795, gnorm=0.220, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 115:    400 / 413 loss=3.769, nll_loss=2.245, ppl=4.74, wps=162375, ups=0, wpb=403397.660, bsz=10877.840, num_updates=47483, lr=0.00082093, gnorm=0.225, clip=0.000, oom=0.000, wall=248, train_wall=234
+resetting loss stats
+| epoch 115 | loss 3.747 | nll_loss 2.220 | ppl 4.66 | wps 161590 | ups 0 | wpb 400872.417 | bsz 10886.000 | num_updates 47495 | lr 0.000820826 | gnorm 0.229 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 115 | valid on 'valid' subset | loss 3.447 | nll_loss 1.845 | ppl 3.59 | num_updates 47495 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint115.pt (epoch 115 @ 47495 updates) (writing took 3.128946304321289 seconds)
+| epoch 116:    100 / 413 loss=3.731, nll_loss=2.201, ppl=4.60, wps=160930, ups=0, wpb=404806.040, bsz=10909.297, num_updates=47596, lr=0.000819955, gnorm=0.221, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 116:    200 / 413 loss=3.753, nll_loss=2.226, ppl=4.68, wps=161378, ups=0, wpb=404370.100, bsz=10983.460, num_updates=47696, lr=0.000819095, gnorm=0.223, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 116:    300 / 413 loss=3.768, nll_loss=2.243, ppl=4.73, wps=160510, ups=0, wpb=403750.750, bsz=10903.280, num_updates=47796, lr=0.000818237, gnorm=0.221, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 116:    400 / 413 loss=3.764, nll_loss=2.238, ppl=4.72, wps=160712, ups=0, wpb=404127.570, bsz=10818.720, num_updates=47896, lr=0.000817383, gnorm=0.224, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 116 | loss 3.744 | nll_loss 2.216 | ppl 4.64 | wps 160493 | ups 0 | wpb 398903.250 | bsz 10696.000 | num_updates 47908 | lr 0.00081728 | gnorm 0.212 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 116 | valid on 'valid' subset | loss 3.442 | nll_loss 1.844 | ppl 3.59 | num_updates 47908 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint116.pt (epoch 116 @ 47908 updates) (writing took 3.0979161262512207 seconds)
+| epoch 117:    100 / 413 loss=3.741, nll_loss=2.213, ppl=4.64, wps=160688, ups=0, wpb=404527.287, bsz=10918.119, num_updates=48009, lr=0.00081642, gnorm=0.219, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 117:    200 / 413 loss=3.748, nll_loss=2.220, ppl=4.66, wps=161333, ups=0, wpb=404504.090, bsz=10944.160, num_updates=48109, lr=0.000815571, gnorm=0.225, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 117:    300 / 413 loss=3.760, nll_loss=2.235, ppl=4.71, wps=162145, ups=0, wpb=404185.910, bsz=10904.230, num_updates=48209, lr=0.000814725, gnorm=0.230, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 117:    400 / 413 loss=3.761, nll_loss=2.235, ppl=4.71, wps=161412, ups=0, wpb=403966.860, bsz=10862.800, num_updates=48309, lr=0.000813881, gnorm=0.230, clip=0.000, oom=0.000, wall=250, train_wall=235
+resetting loss stats
+| epoch 117 | loss 3.761 | nll_loss 2.236 | ppl 4.71 | wps 164012 | ups 0 | wpb 397845.750 | bsz 10574.000 | num_updates 48321 | lr 0.00081378 | gnorm 0.213 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 117 | valid on 'valid' subset | loss 3.446 | nll_loss 1.839 | ppl 3.58 | num_updates 48321 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint117.pt (epoch 117 @ 48321 updates) (writing took 3.5651159286499023 seconds)
+| epoch 118:    100 / 413 loss=3.758, nll_loss=2.232, ppl=4.70, wps=160796, ups=0, wpb=404317.861, bsz=10955.089, num_updates=48422, lr=0.000812931, gnorm=0.227, clip=0.000, oom=0.000, wall=290, train_wall=265
+resetting loss stats
+| epoch 118:    200 / 413 loss=3.747, nll_loss=2.220, ppl=4.66, wps=161425, ups=0, wpb=404675.790, bsz=10810.960, num_updates=48522, lr=0.000812093, gnorm=0.224, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 118:    300 / 413 loss=3.747, nll_loss=2.220, ppl=4.66, wps=160399, ups=0, wpb=403882.880, bsz=10914.740, num_updates=48622, lr=0.000811257, gnorm=0.227, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 118:    400 / 413 loss=3.756, nll_loss=2.230, ppl=4.69, wps=160605, ups=0, wpb=403920.580, bsz=10927.590, num_updates=48722, lr=0.000810424, gnorm=0.227, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 118 | loss 3.745 | nll_loss 2.218 | ppl 4.65 | wps 161210 | ups 0 | wpb 401088.500 | bsz 10745.333 | num_updates 48734 | lr 0.000810324 | gnorm 0.214 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 118 | valid on 'valid' subset | loss 3.443 | nll_loss 1.842 | ppl 3.58 | num_updates 48734 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint118.pt (epoch 118 @ 48734 updates) (writing took 2.9968812465667725 seconds)
+| epoch 119:    100 / 413 loss=3.739, nll_loss=2.210, ppl=4.63, wps=161298, ups=0, wpb=404816.040, bsz=10968.792, num_updates=48835, lr=0.000809486, gnorm=0.226, clip=0.000, oom=0.000, wall=289, train_wall=265
+resetting loss stats
+| epoch 119:    200 / 413 loss=3.754, nll_loss=2.227, ppl=4.68, wps=162042, ups=0, wpb=403394.390, bsz=10883.920, num_updates=48935, lr=0.000808659, gnorm=0.227, clip=0.000, oom=0.000, wall=249, train_wall=235
+resetting loss stats
+| epoch 119:    300 / 413 loss=3.749, nll_loss=2.222, ppl=4.67, wps=163683, ups=0, wpb=405056.380, bsz=10899.670, num_updates=49035, lr=0.000807834, gnorm=0.229, clip=0.000, oom=0.000, wall=247, train_wall=236
+resetting loss stats
+| epoch 119:    400 / 413 loss=3.759, nll_loss=2.233, ppl=4.70, wps=163264, ups=0, wpb=403946.180, bsz=10894.180, num_updates=49135, lr=0.000807011, gnorm=0.232, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 119 | loss 3.779 | nll_loss 2.256 | ppl 4.78 | wps 163470 | ups 0 | wpb 397581.333 | bsz 10426.000 | num_updates 49147 | lr 0.000806913 | gnorm 0.239 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 119 | valid on 'valid' subset | loss 3.446 | nll_loss 1.842 | ppl 3.59 | num_updates 49147 | best_loss 3.44143
+| saved checkpoint model-save-dir/checkpoint119.pt (epoch 119 @ 49147 updates) (writing took 3.422541379928589 seconds)
+| epoch 120:    100 / 413 loss=3.741, nll_loss=2.212, ppl=4.63, wps=161985, ups=0, wpb=404778.257, bsz=10965.941, num_updates=49248, lr=0.000806085, gnorm=0.221, clip=0.000, oom=0.000, wall=288, train_wall=265
+resetting loss stats
+| epoch 120:    200 / 413 loss=3.752, nll_loss=2.225, ppl=4.67, wps=162698, ups=0, wpb=402884.290, bsz=10889.510, num_updates=49348, lr=0.000805268, gnorm=0.231, clip=0.000, oom=0.000, wall=248, train_wall=235
+resetting loss stats
+| epoch 120:    300 / 413 loss=3.757, nll_loss=2.231, ppl=4.70, wps=163584, ups=0, wpb=404819.190, bsz=10874.880, num_updates=49448, lr=0.000804453, gnorm=0.226, clip=0.000, oom=0.000, wall=247, train_wall=235
+resetting loss stats
+| epoch 120:    400 / 413 loss=3.750, nll_loss=2.224, ppl=4.67, wps=163337, ups=0, wpb=404888.060, bsz=10866.420, num_updates=49548, lr=0.000803641, gnorm=0.227, clip=0.000, oom=0.000, wall=248, train_wall=236
+resetting loss stats
+| epoch 120 | loss 3.758 | nll_loss 2.232 | ppl 4.70 | wps 162448 | ups 0 | wpb 396277.750 | bsz 10841.333 | num_updates 49560 | lr 0.000803543 | gnorm 0.225 | clip 0.000 | oom 0.000 | wall 29 | train_wall 28
+| epoch 120 | valid on 'valid' subset | loss 3.441 | nll_loss 1.837 | ppl 3.57 | num_updates 49560 | best_loss 3.44122
+| saved checkpoint model-save-dir/checkpoint120.pt (epoch 120 @ 49560 updates) (writing took 4.3777172565460205 seconds)
+| epoch 121:    100 / 413 loss=3.739, nll_loss=2.210, ppl=4.63, wps=163933, ups=0, wpb=404554.663, bsz=10848.653, num_updates=49661, lr=0.000802726, gnorm=0.224, clip=0.000, oom=0.000, wall=287, train_wall=263
+resetting loss stats
+| epoch 121:    200 / 413 loss=3.755, nll_loss=2.228, ppl=4.69, wps=164189, ups=0, wpb=404337.260, bsz=10835.280, num_updates=49761, lr=0.000801919, gnorm=0.234, clip=0.000, oom=0.000, wall=246, train_wall=233
+resetting loss stats
+| epoch 121:    300 / 413 loss=3.757, nll_loss=2.231, ppl=4.70, wps=160602, ups=0, wpb=404344.080, bsz=10926.950, num_updates=49861, lr=0.000801114, gnorm=0.226, clip=0.000, oom=0.000, wall=252, train_wall=235
+resetting loss stats
+| epoch 121:    400 / 413 loss=3.745, nll_loss=2.218, ppl=4.65, wps=160852, ups=0, wpb=404087.960, bsz=10997.600, num_updates=49961, lr=0.000800312, gnorm=0.227, clip=0.000, oom=0.000, wall=251, train_wall=235
+resetting loss stats
+| epoch 121 | loss 3.772 | nll_loss 2.247 | ppl 4.75 | wps 160137 | ups 0 | wpb 396678.333 | bsz 10753.333 | num_updates 49973 | lr 0.000800216 | gnorm 0.216 | clip 0.000 | oom 0.000 | wall 30 | train_wall 28
+| epoch 121 | valid on 'valid' subset | loss 3.441 | nll_loss 1.836 | ppl 3.57 | num_updates 49973 | best_loss 3.44074
+| saved checkpoint model-save-dir/checkpoint121.pt (epoch 121 @ 49973 updates) (writing took 4.853093147277832 seconds)
+| epoch 122 | loss 3.726 | nll_loss 2.195 | ppl 4.58 | wps 160349 | ups 0 | wpb 403373.074 | bsz 10824.852 | num_updates 50000 | lr 0.0008 | gnorm 0.222 | clip 0.000 | oom 0.000 | wall 106 | train_wall 91
+| epoch 122 | valid on 'valid' subset | loss 3.446 | nll_loss 1.839 | ppl 3.58 | num_updates 50000 | best_loss 3.44074
+| saved checkpoint model-save-dir/checkpoint_last.pt (epoch 122 @ 50000 updates) (writing took 1.6125295162200928 seconds)
+| done training in 95835.6 seconds
+/users/ace19rb/.conda/envs/share_layer_params_baseline/lib/python3.8/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 744 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
