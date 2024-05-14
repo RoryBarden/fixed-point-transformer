@@ -25,6 +25,7 @@ In addition, this document provides the way to train 12-layered Transformer with
 ### Training
 
 ##### 1. Download and pre-process datasets following the description in [this page](https://github.com/pytorch/fairseq/tree/master/examples/scaling_nmt)
+(These downloads are no longer available, I have been able to find and process the wmt16_en_de_bpe32k dataset which is available [here](https://drive.google.com/drive/folders/1syjwVvPTv50tCOAT4_A3SvvBT80oyR41?usp=sharing))
 
 ##### 2. Train model
 
